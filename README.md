@@ -1,2 +1,2 @@
 # pod_manifests
-Kubernetes YAML templates
+Kubernetes pod manifests in YAML format.
