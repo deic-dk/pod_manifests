@@ -1,7 +1,11 @@
-# YAML Description
+### YAML Description
 
-The ubuntu_sciencedata.yaml contains all the relevant information, so the users can run an Ubuntu Focal Fossa container using the image that is provided by sciencedata.dk . In the yaml file, under the metadata section, the image that is used, is coming from the sciencedata repository on DockeHub. In order for the users to maintain their data, the path to sciencedata.dk/storage is specified where persistant volume is mounted into the container. The ports that the container is listening to are also specified in the yaml file as the ubuntu container will only be accessible by the users if they run an ssh server on port 22 and a web server on port 80. The users have to provide their public ssh key to create the container. 
+This file contains the configurations for deploying an Ubuntu Focal Fossa container. The image is provided by sciencedata.dk and pulled by the public sciencedata repository on DockerHub. 
 
-## Docker Image Description
+Your data is persisted by mounting the container's directory specified in the "mountPath" item to a dedicated folder on sciencedata.dk/storage with the name of your choice. 
 
-Runs an Ubuntu Linux 20.04 LTS (Focal Fossa) container through sciencedata.dk
+You need to provide a valid public SSH key, so that after creation you can access the container via SSH connection to a dedicated port.  
+
+### Docker Image Description
+
+Runs an Ubuntu Linux 20.04 LTS (Focal Fossa) container provided by sciencedata.dk
