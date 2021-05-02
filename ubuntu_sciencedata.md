@@ -4,5 +4,5 @@ This file contains the configurations for deploying a container of an Ubuntu Lin
 
 Your data is persisted by mounting the container's directory specified in the "mountPath" item to a dedicated folder on sciencedata.dk/storage with the name of your choice. 
 
-You need to provide a valid public SSH key, so that after creation you can access the container via SSH connection to a dedicated port.  
+You need to provide a valid public SSH key, so that after creation you can access the container locally via SSH connection.  
 
