@@ -4,5 +4,5 @@ This file contains the configurations for deploying a container of an **Ubuntu L
 
 Your data is persisted by mounting the container's directory specified in the `mountPath` item to a dedicated folder on `sciencedata.dk/storage/<folder-name>` where `<folder-name>` is the name of your choice. 
 
-You need to provide a valid public SSH key, so that after creation you can access the container locally via SSH connection.  
+By providing a valid public SSH key, you can access the container locally via SSH connection after its creation.  
 
