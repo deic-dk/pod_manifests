@@ -1,8 +1,10 @@
-### YAML Description
+Applying this manifest will start **Ubuntu Linux 20.04 LTS (Focal Fossa)** running the Dropbear SSH server and the Caddy web server.
 
-This file contains the configurations for deploying a container of an **Ubuntu Linux 20.04 LTS (Focal Fossa)** image. The image is provided by **sciencedata.dk** and pulled by our public repository on [DockerHub](https://hub.docker.com/r/sciencedata/ubuntu_focal_sciencedata). 
+Dropbear is configured to serve data off the directory `/root/www/container_host_name/`, where `container_name` is the hostname of the container in question.
 
-Your data is persisted by mounting the container's directory specified in the `mountPath` item to a dedicated folder on `sciencedata.dk/storage/<folder-name>` where `<folder-name>` is the name of your choice. 
+The directory `/root/www/` is mounted from your ScienceData home server. The path to the folder you mount is specified below. The path is relative to [`/storage/` on ScienceData](https://sciencedata.dk/sites/developer/ManagingFiles/index#toc_head9).
 
-By providing a valid public SSH key, you can access the container locally after its creation via an SSH connection.  
+By providing a public SSH key, you can access the container via SSH.
+
+The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/ubuntu_focal_sciencedata).
 
