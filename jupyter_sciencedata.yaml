@@ -17,6 +17,8 @@ spec:
       value: ""
     - name: LICENSE_SERVER
       value: "10.2.0.15"
+    - name: MOUNT_SRC
+      value: "/usr/local/software"
     lifecycle:
       postStart:
         exec:
