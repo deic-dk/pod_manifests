@@ -20,7 +20,7 @@ spec:
     - name: MOUNT_SRC
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
-      value: 8888
+      value: "8888"
     lifecycle:
       postStart:
         exec:
