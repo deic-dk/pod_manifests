@@ -1,6 +1,8 @@
-Applying this manifest will start a **Jupyter Notebook server** with kernels for Python, R, Matlab and Mathematica.
+Applying this manifest will start a **Jupyter Notebook server** with kernels for Python, R and Julia.
+
+Inside the pod/container, your ScienceData  home server/silo can be accessed w/o password over the trusted/internal network by curl'ing to https://sciencedata.dk/files/.
 
 The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/jupyter_sciencedata).
 
-TODO: You can load and save notebooks to and from your ScienceData home folder.
+TODO: Notebooks are loaded and saved from and to your ScienceData home folder.
 
