@@ -18,7 +18,7 @@ spec:
     - name: MMA_LICENSE_SERVER
       value: "10.2.0.15"
     - name: SETUP_MATLAB
-      value: ""
+      value: "true"
     - name: SETUP_MATHEMATICA
       value: ""
     - name: MOUNT_SRC

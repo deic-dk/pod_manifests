@@ -20,7 +20,7 @@ spec:
     - name: SETUP_MATLAB
       value: ""
     - name: SETUP_MATHEMATICA
-      value: ""
+      value: "true"
     - name: MOUNT_SRC
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
