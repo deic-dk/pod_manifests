@@ -7,13 +7,13 @@ The image is pulled from our [public repository on DockerHub](https://hub.docker
 To enable MATLAB you need to run the command below in a shell inside the pod/container:
 
 ```
-export SETUP_MATLAB && /usr/local/bin/start-notebook.d/setup-software.sh
+export SETUP_MATLAB=true && /usr/local/bin/start-notebook.d/setup-software.sh
 ```
 
 To enable Mathematica you need to run the command below in a shell inside the pod/container:
 
 ```
-export SETUP_MATHEMATICA && /usr/local/bin/start-notebook.d/setup-software.sh
+export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/setup-software.sh
 ```
 
 This may take a few minutes.
