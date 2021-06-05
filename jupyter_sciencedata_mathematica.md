@@ -4,6 +4,6 @@ Inside the pod/container, your ScienceData  home server/silo can be accessed w/o
 
 The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/jupyter_sciencedata).
 
-Starting this image may take a few minutes.
+For Mathematica to work, you may need to shut down and restart the kernel ("Kernel"->"Shutdown", "Kernel"->"Restart").
 
 TODO: Notebooks are loaded and saved from and to your ScienceData home folder.

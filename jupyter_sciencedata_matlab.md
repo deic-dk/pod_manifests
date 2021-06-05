@@ -4,6 +4,4 @@ Inside the pod/container, your ScienceData  home server/silo can be accessed w/o
 
 The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/jupyter_sciencedata).
 
-Starting this image may take a few minutes.
-
 TODO: Notebooks are loaded and saved from and to your ScienceData home folder.

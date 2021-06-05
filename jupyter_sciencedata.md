@@ -16,7 +16,9 @@ To enable Mathematica you need to run the command below in a shell inside the po
 export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/setup-software.sh
 ```
 
-This may take a few minutes.
+Then reload the web page.
+
+For Mathematica to work, you may need to shut down and restart the kernel ("Kernel"->"Shutdown", "Kernel"->"Restart").
 
 TODO: Notebooks are loaded and saved from and to your ScienceData home folder.
 
