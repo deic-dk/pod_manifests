@@ -1,6 +1,6 @@
 Applying this manifest will start a **Jupyter Notebook server** with kernels for Python, R and Julia.
 
-The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server. So, please wait a bit before clicking.
+The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 
 Notebooks are loaded and saved from and to your ScienceData home folder, i.e. what you see in the file browser is the same as what you see in the ScienceData files view ("Home").
 
