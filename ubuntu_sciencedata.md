@@ -2,7 +2,7 @@ Applying this manifest will start **Ubuntu Linux 20.04 LTS (Focal Fossa)** - run
 
 Dropbear is configured to serve data off the directory `/root/www/`.
 
-The directory `/root/www/` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/` on ScienceData](https://sciencedata.dk/sites/developer/ManagingFiles/index#toc_head9).
+The directory `/root/www/` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/` on ScienceData](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
 By providing a public SSH key you can access your container via SSH.
 
