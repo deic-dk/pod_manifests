@@ -9,8 +9,13 @@ metadata:
 spec:
   containers:
   - name: ubuntu-focal
-    image: sciencedata/ubuntu_focal_sciencedata
+    image: sciencedata/ubuntu_focal_caddy_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/root/www"
     ports:
+    - containerPort: 80
+      protocol: TCP
     - containerPort: 22
       protocol: TCP
     env:
@@ -18,5 +23,7 @@ spec:
       value: ""
     - name: USERNAME
       value: "root"
+    - name: HOME_SERVER
+      value: ""
   restartPolicy: Never
   #nodeName: worker1
