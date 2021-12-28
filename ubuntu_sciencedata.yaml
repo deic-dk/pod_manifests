@@ -11,8 +11,6 @@ spec:
   - name: ubuntu-focal
     image: sciencedata/ubuntu_focal_sciencedata
     ports:
-    - containerPort: 80
-      protocol: TCP
     - containerPort: 22
       protocol: TCP
     env:
