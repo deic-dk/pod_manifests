@@ -18,5 +18,7 @@ spec:
       value: ""
     - name: USERNAME
       value: "root"
+    - name: HOME_SERVER
+      value: ""
   restartPolicy: Never
   #nodeName: worker1
