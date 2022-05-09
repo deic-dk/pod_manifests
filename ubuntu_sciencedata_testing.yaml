@@ -8,7 +8,7 @@ metadata:
     security.alpha.kubernetes.io/sysctls: net.ipv4.ping_group_range=0 2147483647
 spec:
   containers:
-  - name: ubuntu-focal
+  - name: ubuntu-jammy
     image: kube.sciencedata.dk:5000/ubuntu_jammy_sciencedata
     ports:
     - containerPort: 22
