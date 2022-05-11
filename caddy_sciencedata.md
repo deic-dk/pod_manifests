@@ -1,4 +1,4 @@
-Applying this manifest will start Ubuntu Linux 20.04 LTS (Focal Fossa) - running the Dropbear SSH server and the **Caddy** web server.
+Applying this manifest will start Ubuntu Linux 22.04 LTS (Jammy Jellyfish) - running the OpenSSH server and the **Caddy** web server.
 
 Caddy is configured to serve data off the directory `/root/www/`.
 
@@ -6,5 +6,4 @@ The directory `/root/www/` is mounted from your ScienceData home server. The pat
 
 By providing a public SSH key you can access your container via SSH.
 
-The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/ubuntu_focal_caddy_sciencedata).
-
+The image is built from our [image repository](https://github.com/deic-dk/sciencedata_images) and hosted in our in-house docker registry.
