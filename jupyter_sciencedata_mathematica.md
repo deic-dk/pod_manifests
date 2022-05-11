@@ -6,6 +6,6 @@ Notebooks are loaded and saved from and to your ScienceData home folder, i.e. wh
 
 From a notebook or shell, your ScienceData  home server/silo can be accessed w/o password over the trusted/internal network via HTTP at https://sciencedata/files/.
 
-The image is pulled from our [repository on DockerHub](https://hub.docker.com/r/sciencedata/jupyter_sciencedata).
+The image is pulled from our [image repository](https://github.com/deic-dk/sciencedata_images) and hosted in our in-house docker registry.
 
 For Mathematica to work, you may need to shut down and restart the kernel ("Kernel"->"Shutdown", "Kernel"->"Restart").

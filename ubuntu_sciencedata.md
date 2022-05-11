@@ -1,9 +1,6 @@
-Applying this manifest will start **Ubuntu Linux 20.04 LTS (Focal Fossa)** - running the Dropbear SSH server.
+Applying this manifest will start **Ubuntu Linux 22.04 LTS (Jammy Jellyfish)** - running the OpenSSH server.
 
 By providing a public SSH key you can access your container via SSH.
 
-Traffic to the liste "HTTPS URL" is forwarded to port 80 of the pod. This is just for convenience in case it
-is needed. The pod does not run anything on port 80.
-
-The image is pulled from our [public repository on DockerHub](https://hub.docker.com/r/sciencedata/ubuntu_focal_sciencedata).
+The image is built from our [image repository](https://github.com/deic-dk/sciencedata_images) and hosted in our in-house docker registry.
 

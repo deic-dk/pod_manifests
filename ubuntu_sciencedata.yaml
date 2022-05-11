@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu-focal
+  name: ubuntu-jammy
   labels:
     app: ubuntu
   annotations:
     security.alpha.kubernetes.io/sysctls: net.ipv4.ping_group_range=0 2147483647
 spec:
   containers:
-  - name: ubuntu-focal
-    image: sciencedata/ubuntu_focal_sciencedata
+  - name: ubuntu-jammy
+    image: kube.sciencedata.dk:5000/ubuntu_jammy_sciencedata
     ports:
     - containerPort: 22
       protocol: TCP
@@ -20,5 +20,9 @@ spec:
       value: "root"
     - name: HOME_SERVER
       value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
   restartPolicy: Never
-  #nodeName: worker1

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jupyter
+  name: jupyter-mathematica
 spec:
   containers:
-  - name: jupyter
-    image: sciencedata/jupyter_sciencedata
+  - name: jupyter-mathematica
+    image: kube.sciencedata.dk:5000/jupyter_sciencedata
     volumeMounts:
       - name: local
         mountPath: "/usr/local/software"

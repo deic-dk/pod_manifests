@@ -6,4 +6,4 @@ The directory `/root/www/` is mounted from your ScienceData home server. The pat
 
 By providing a public SSH key you can access your container via SSH.
 
-The image is built from our [image repository](https://github.com/deic-dk/sciencedata_images) and hosted in our in-house docker registry.
+The image is pulled from our [image repository](https://github.com/deic-dk/sciencedata_images) and hosted in our in-house docker registry.

@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter
-    image: sciencedata/jupyter_sciencedata
+    image: kube.sciencedata.dk:5000/jupyter_sciencedata
     volumeMounts:
       - name: local
         mountPath: "/usr/local/software"
