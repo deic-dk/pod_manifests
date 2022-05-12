@@ -25,4 +25,9 @@ spec:
       value: "root"
     - name: HOME_SERVER
       value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
   restartPolicy: Never
