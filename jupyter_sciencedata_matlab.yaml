@@ -25,3 +25,10 @@ spec:
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
+    lifecycle:
+      postStart:
+        exec:
+          command: ["/bin/bash", "-c", "curl --insecure https://sciencedata/files/mathpass > /home/sciencedata/.WolframEngine/Licensing/mathpass >& /dev/null || echo 'no mathpass'"]
+      preStop:
+        exec:
+          command: ["/bin/bash","-c","[ -s /home/sciencedata/.WolframEngine/Licensing/mathpass ] && curl --insecure --upload /home/sciencedata/.WolframEngine/Licensing/mathpass https://sciencedata/files/mathpass"]
