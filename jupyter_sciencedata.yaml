@@ -9,6 +9,8 @@ spec:
     volumeMounts:
       - name: local
         mountPath: "/usr/local/software"
+      - name: sciencedata
+        mountPath: "/home/jovyan"
     ports:
     - containerPort: 8888
       protocol: TCP
