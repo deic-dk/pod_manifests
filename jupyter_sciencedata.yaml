@@ -10,7 +10,7 @@ spec:
       - name: local
         mountPath: "/usr/local/software"
       - name: sciencedata
-        mountPath: "/home/jovyan"
+        mountPath: "/mnt/sciencedata"
     ports:
     - containerPort: 8888
       protocol: TCP
@@ -31,4 +31,6 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
+    - name: STORAGE_PATH
+      value: "jupyter"
       
