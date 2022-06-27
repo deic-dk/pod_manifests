@@ -29,8 +29,8 @@ spec:
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
-    - name: FILE
+    - name: FILE # ask
       value: ""
-    - name: STORAGE_PATH
+    - name: WORKING_DIRECTORY # ask require
       value: "jupyter"
       
