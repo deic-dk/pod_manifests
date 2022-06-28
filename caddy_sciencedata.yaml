@@ -19,12 +19,14 @@ spec:
     - containerPort: 22
       protocol: TCP
     env:
-    - name: SSH_PUBLIC_KEY
+    - name: SSH_PUBLIC_KEY # ask require
       value: ""
     - name: USERNAME
       value: "root"
     - name: HOME_SERVER
       value: ""
+    - name: WORKING_DIRECTORY # ask require
+      value: "website"
     securityContext:
       capabilities:
         add:
