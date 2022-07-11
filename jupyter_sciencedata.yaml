@@ -7,7 +7,7 @@ spec:
   - name: jupyter
     image: kube.sciencedata.dk:5000/jupyter_sciencedata_testing
     volumeMounts:
-      - name: local
+      - name: jupyter-software
         mountPath: "/usr/local/software"
       - name: sciencedata
         mountPath: "/mnt/sciencedata"
@@ -33,4 +33,8 @@ spec:
       value: ""
     - name: WORKING_DIRECTORY # ask require
       value: "jupyter"
-      
+  volumes:
+  - name: jupyter-software
+    persistentVolumeClaim:
+      claimName: jupyter-sciencedata-v1.0.0
+ 
