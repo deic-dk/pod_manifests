@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: jupyter
   annotations:
-    - appendURL: "copyForFrontend"
+    appendURL: "copyForFrontend"
 spec:
   containers:
   - name: jupyter
