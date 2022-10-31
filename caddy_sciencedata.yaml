@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: ubuntu-caddy
-    image: kube.sciencedata.dk:5000/ubuntu_jammy_caddy_sciencedata_testing
+    image: LOCALREGISTRY/ubuntu_jammy_caddy_sciencedata_testing
     volumeMounts:
       - name: sciencedata
         mountPath: "/root/www"

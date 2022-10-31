@@ -11,7 +11,7 @@ metadata:
 spec:
   containers:
   - name: ubuntu-jammy
-    image: kube.sciencedata.dk:5000/ubuntu_jammy_sciencedata_testing
+    image: LOCALREGISTRY/ubuntu_jammy_sciencedata_testing
     ports:
     - containerPort: 22
       protocol: TCP

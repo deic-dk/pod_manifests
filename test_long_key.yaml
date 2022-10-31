@@ -8,5 +8,5 @@ metadata:
 spec:
   containers:
   - name: tester
-    image: kube.sciencedata.dk:5000/test_long_key
+    image: LOCALREGISTRY/test_long_key
   restartPolicy: Never

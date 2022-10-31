@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: tester
-    image: kube.sciencedata.dk:5000/test_fail_start
+    image: LOCALREGISTRY/test_fail_start
   restartPolicy: Never
