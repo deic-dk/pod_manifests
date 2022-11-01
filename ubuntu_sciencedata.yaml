@@ -5,7 +5,6 @@ metadata:
   labels:
     app: ubuntu
   annotations:
-    security.alpha.kubernetes.io/sysctls: net.ipv4.ping_group_range=0 2147483647
     ed25519HostKeyHash: "copyForFrontend"
     rsaHostKeyHash: "copyForFrontend"
 spec:
