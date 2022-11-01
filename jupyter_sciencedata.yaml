@@ -4,6 +4,7 @@ metadata:
   name: jupyter
   annotations:
     appendURL: "copyForFrontend"
+    sciencedata.dk/ingress-port: "8888"
 spec:
   containers:
   - name: jupyter

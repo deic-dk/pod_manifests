@@ -4,6 +4,8 @@ metadata:
   name: ubuntu-caddy
   labels:
     app: ubuntu-caddy
+  annotations:
+    sciencedata.dk/ingress-port: "80"
 spec:
   containers:
   - name: ubuntu-caddy
