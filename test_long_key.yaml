@@ -3,8 +3,7 @@ kind: Pod
 metadata:
   name: test-long-key
   annotations:
-    longkey: "copyForFrontend"
-    shortkey: "copyForFrontend"
+    sciencedata.dk/copy-token: "longkey,shortkey"
 spec:
   containers:
   - name: tester

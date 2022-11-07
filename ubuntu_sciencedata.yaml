@@ -5,8 +5,7 @@ metadata:
   labels:
     app: ubuntu
   annotations:
-    ed25519HostKeyHash: "copyForFrontend"
-    rsaHostKeyHash: "copyForFrontend"
+    sciencedata.dk/copy-token: "ed25519HostKeyHash,rsaHostKeyHash"
 spec:
   containers:
   - name: ubuntu-jammy
