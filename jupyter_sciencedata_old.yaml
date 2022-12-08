@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jupyter
+  annotations:
+    sciencedata.dk/copy-token: "appendURL"
+    sciencedata.dk/ingress-port: "8888"
+spec:
+  containers:
+  - name: jupyter
+    image: LOCALREGISTRY/jupyter_sciencedata_old
+    volumeMounts:
+      - name: jupyter-software
+        mountPath: "/usr/local/software"
+      - name: sciencedata
+        mountPath: "/mnt/sciencedata"
+    ports:
+    - containerPort: 8888
+      protocol: TCP
+    env:
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: MMA_LICENSE_SERVER
+      value: "10.2.0.15"
+    - name: SETUP_MATLAB
+      value: ""
+    - name: SETUP_MATHEMATICA
+      value: ""
+    - name: MOUNT_SRC
+      value: "/usr/local/software"
+    - name: POD_HTTP_PORT
+      value: "8888"
+    - name: FILE # ask
+      value: ""
+  volumes:
+  - name: jupyter-software
+    persistentVolumeClaim:
+      claimName: jupyter-sciencedata-v1.0.0
+ 
