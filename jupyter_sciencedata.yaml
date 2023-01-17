@@ -32,8 +32,13 @@ spec:
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
+    - name: ENVIRONMENT_FILE # ask
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "AUDIT_WRITE"
   volumes:
   - name: jupyter-software
     persistentVolumeClaim:
       claimName: jupyter-sciencedata-v1.0.0
- 
