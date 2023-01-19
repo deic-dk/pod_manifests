@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker
+  annotations:
+spec:
+  containers:
+  - name: worker
+    image: LOCALREGISTRY/python_worker_sciencedata
+    env:
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: ENVIRONMENT_FILE # ask
+      value: ""
+    - name: SSH_PUBLIC_KEY # ask require
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
