@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: worker
   annotations:
+    sciencedata.dk/copy-token: "ed25519HostKeyHash,rsaHostKeyHash"
 spec:
   containers:
   - name: worker
@@ -14,7 +15,11 @@ spec:
       value: ""
     - name: ENVIRONMENT_FILE # ask
       value: ""
-    - name: SSH_PUBLIC_KEY # ask require
+    - name: SSH_PUBLIC_KEY # ask
+      value: ""
+    - name: STAY_ALIVE_AFTER # ask
+      value: ""
+    - name: PYTHON_SCRIPT # ask require
       value: ""
     securityContext:
       capabilities:
