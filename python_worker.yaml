@@ -1,13 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: worker
+  name: python-worker
   annotations:
     sciencedata.dk/copy-token: "ed25519HostKeyHash,rsaHostKeyHash"
 spec:
   containers:
-  - name: worker
+  - name: python-worker
     image: LOCALREGISTRY/python_worker_sciencedata
+    ports:
+    - containerPort: 22
+      protocol: TCP
     env:
     - name: HOME_SERVER
       value: ""
