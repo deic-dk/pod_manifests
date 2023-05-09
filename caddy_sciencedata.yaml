@@ -5,11 +5,11 @@ metadata:
   labels:
     app: ubuntu-caddy
   annotations:
-    security.alpha.kubernetes.io/sysctls: net.ipv4.ping_group_range=0 2147483647
+    sciencedata.dk/ingress-port: "80"
 spec:
   containers:
   - name: ubuntu-caddy
-    image: kube.sciencedata.dk:5000/ubuntu_jammy_caddy_sciencedata
+    image: LOCALREGISTRY/ubuntu_jammy_caddy_sciencedata
     volumeMounts:
       - name: sciencedata
         mountPath: "/root/www"
@@ -19,12 +19,14 @@ spec:
     - containerPort: 22
       protocol: TCP
     env:
-    - name: SSH_PUBLIC_KEY
+    - name: SSH_PUBLIC_KEY # ask require
       value: ""
     - name: USERNAME
       value: "root"
     - name: HOME_SERVER
       value: ""
+    - name: WORKING_DIRECTORY # ask require
+      value: "website"
     securityContext:
       capabilities:
         add:
