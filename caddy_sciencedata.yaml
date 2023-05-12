@@ -12,7 +12,7 @@ spec:
     image: LOCALREGISTRY/ubuntu_jammy_caddy_sciencedata
     volumeMounts:
       - name: sciencedata
-        mountPath: "/root/www"
+        mountPath: "/mnt/sciencedata"
     ports:
     - containerPort: 80
       protocol: TCP
