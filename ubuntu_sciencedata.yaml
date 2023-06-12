@@ -4,8 +4,6 @@ metadata:
   name: ubuntu
   labels:
     app: ubuntu
-  annotations:
-    security.alpha.kubernetes.io/sysctls: net.ipv4.ping_group_range=0 2147483647
 spec:
   containers:
   - name: ubuntu-jammy
@@ -25,4 +23,7 @@ spec:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
+      sysctls:
+      - name: "net.ipv4.ping_group_range"
+        value: "0 2147483647"
   restartPolicy: Never
