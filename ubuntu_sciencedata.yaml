@@ -23,7 +23,8 @@ spec:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
-      sysctls:
-      - name: "net.ipv4.ping_group_range"
-        value: "0 2147483647"
+  securityContext:
+    sysctls:
+    - name: "net.ipv4.ping_group_range"
+      value: "0 2147483647"
   restartPolicy: Never
