@@ -7,7 +7,6 @@ metadata:
 spec:
   containers:
   - name: ubuntu-jammy
-    image: kube.sciencedata.dk:5000/ubuntu_jammy_sciencedata
     ports:
     - containerPort: 22
       protocol: TCP
