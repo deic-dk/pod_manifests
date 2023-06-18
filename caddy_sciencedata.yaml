@@ -23,6 +23,8 @@ spec:
       value: "root"
     - name: HOME_SERVER
       value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
     securityContext:
       capabilities:
         add:
