@@ -23,6 +23,7 @@ spec:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
+          - "NET_ADMIN"
   securityContext:
     sysctls:
     - name: "net.ipv4.ping_group_range"

@@ -30,4 +30,5 @@ spec:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
+          - "NET_ADMIN"
   restartPolicy: Never
