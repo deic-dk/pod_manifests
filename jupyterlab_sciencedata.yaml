@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jupyter
+spec:
+  containers:
+  - name: jupyter
+    image: sciencedata/jupyter_sciencedata_custom
+    volumeMounts:
+      - name: local
+        mountPath: "/usr/local/software"
+    ports:
+    - containerPort: 8888
+      protocol: TCP
+    env:
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: MATLAB_LICENSE_SERVER
+      value: "10.2.0.15"
+    - name: MATLAB_LICENSE_PORT
+      value: "1711"
+    - name: MMA_LICENSE_SERVER
+      value: "10.2.0.15"
+    - name: SETUP_MATLAB
+      value: ""
+    - name: SETUP_MATHEMATICA
+      value: ""
+    - name: MOUNT_SRC
+      value: "/usr/local/software"
+    - name: POD_HTTP_PORT
+      value: "8888"
+    - name: FILE
+      value: ""
+    - name: JUPYTER_ENABLE_LAB
+      value: "true"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+
