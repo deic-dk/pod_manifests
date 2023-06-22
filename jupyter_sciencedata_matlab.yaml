@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter-matlab
-    image: sciencedata/jupyter_sciencedata
+    image: sciencedata/jupyter_sciencedata_custom
     volumeMounts:
       - name: local
         mountPath: "/usr/local/software"
