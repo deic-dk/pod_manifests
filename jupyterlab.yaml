@@ -32,9 +32,9 @@ spec:
     - name: POD_HTTP_PORT
       value: "8888"
     - name: ROOT_DIR
-      value: ""
+      value: "/home/sciencedata"
     - name: PREFERRED_DIR
-      value: ""
+      value: "/home/sciencedata"
     - name: JUPYTER_ENABLE_LAB
       value: "true"
     securityContext:
