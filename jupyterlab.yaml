@@ -31,6 +31,10 @@ spec:
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
+    - name: ROOT_DIR
+      value: ""
+    - name: PREFERRED_DIR
+      value: ""
     - name: JUPYTER_ENABLE_LAB
       value: "true"
     securityContext:
