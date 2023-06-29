@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu-caddy
+  name: ubuntu-jammy-caddy
   labels:
-    app: ubuntu-caddy
+    app: ubuntu-jammy-caddy
 spec:
   containers:
-  - name: ubuntu-caddy
+  - name: ubuntu-jammy-caddy
     image: sciencedata/ubuntu_jammy_caddy_sciencedata
     volumeMounts:
       - name: sciencedata
