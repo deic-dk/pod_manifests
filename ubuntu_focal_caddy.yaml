@@ -10,7 +10,7 @@ spec:
     image: sciencedata/ubuntu_focal_caddy_sciencedata
     volumeMounts:
       - name: sciencedata
-        mountPath: "/root/www"
+        mountPath: "/var/www"
     ports:
     - containerPort: 80
       protocol: TCP
@@ -20,7 +20,7 @@ spec:
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: USERNAME
-      value: "root"
+      value: "www"
     - name: HOME_SERVER
       value: ""
     - name: PUBLIC_HOME_SERVER
