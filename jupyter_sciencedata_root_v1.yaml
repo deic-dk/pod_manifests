@@ -8,7 +8,7 @@ spec:
     image: sciencedata/jupyter_sciencedata_custom:1.1
     volumeMounts:
       - name: local
-        mountPath: "/usr/local/software"
+        mountPath: "/cvmfs"
     ports:
     - containerPort: 8888
       protocol: TCP
@@ -17,24 +17,14 @@ spec:
       value: ""
     - name: SD_UID
       value: ""
-    - name: MATLAB_LICENSE_SERVER
-      value: "10.2.0.15"
-    - name: MATLAB_LICENSE_PORT
-      value: "1711"
-    - name: MMA_LICENSE_SERVER
-      value: "10.2.0.15"
-    - name: SETUP_MATLAB
-      value: ""
-    - name: SETUP_MATHEMATICA
-      value: ""
+    - name: SETUP_LCG
+      value: "/cvmfs/sft.cern.ch/lcg/views/LCG_104/x86_64-ubuntu2004-gcc9-opt/setup.sh"
     - name: MOUNT_SRC
-      value: "/usr/local/software"
+      value: "/cvmfs"
     - name: POD_HTTP_PORT
       value: "8888"
     - name: FILE
       value: ""
-    - name: JUPYTER_ENABLE_LAB
-      value: "true"
     securityContext:
       capabilities:
         add:
