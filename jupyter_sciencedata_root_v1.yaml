@@ -7,7 +7,7 @@ spec:
   - name: jupyter
     image: sciencedata/jupyter_sciencedata_custom:1.1
     volumeMounts:
-      - name: local
+      - name: cvmfs
         mountPath: "/cvmfs"
     ports:
     - containerPort: 8888
@@ -17,10 +17,10 @@ spec:
       value: ""
     - name: SD_UID
       value: ""
-    - name: SETUP_LCG
+    - name: SETUP_SCRIPT
       value: "/cvmfs/sft.cern.ch/lcg/views/LCG_104/x86_64-ubuntu2004-gcc9-opt/setup.sh"
-    - name: MOUNT_SRC
-      value: "/cvmfs"
+    - name: CVMFS_REPOS
+      value: ""
     - name: POD_HTTP_PORT
       value: "8888"
     - name: FILE
