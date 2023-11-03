@@ -7,7 +7,7 @@ spec:
   - name: jupyter
     image: sciencedata/jupyter_sciencedata:1.1
     volumeMounts:
-      - name: local
+      - name: local--usr-local-software # name of volume - must match MOUNT_SRC - can be mounted anywhere
         mountPath: "/usr/local/software"
     ports:
     - containerPort: 8888
