@@ -6,9 +6,6 @@ spec:
   containers:
   - name: jupyter
     image: sciencedata/jupyter_sciencedata:1.1
-    volumeMounts:
-      - name: local--usr-local-software # name of volume - must match MOUNT_SRC - can be mounted anywhere
-        mountPath: "/usr/local/software"
     ports:
     - containerPort: 8888
       protocol: TCP
@@ -28,6 +25,8 @@ spec:
     - name: SETUP_MATHEMATICA
       value: ""
     - name: MOUNT_SRC
+      value: "/usr/local/software"
+    - name: MOUNT_DEST
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
