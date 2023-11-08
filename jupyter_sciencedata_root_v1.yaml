@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter
-    image: sciencedata/jupyter_sciencedata_custom:1.2
+    image: sciencedata/jupyter_sciencedata_custom:1.3
     ports:
     - containerPort: 8888
       protocol: TCP
