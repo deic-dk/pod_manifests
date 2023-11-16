@@ -15,7 +15,7 @@ spec:
     - name: SD_UID
       value: ""
     - name: SETUP_ROOT
-      value: "true"
+      value: ""
     - name: CVMFS_REPOS
       value: "atlas.cern.ch,atlas-condb.cern.ch,grid.cern.ch,unpacked.cern.ch,sft.cern.ch"
     - name: POD_HTTP_PORT
