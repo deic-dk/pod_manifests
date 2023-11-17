@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: ubuntu
-    image: sciencedata/ubuntu_jammy_sciencedata
+    image: sciencedata/ubuntu_focal_sciencedata
     ports:
     - containerPort: 22
       protocol: TCP

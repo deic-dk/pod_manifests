@@ -1,4 +1,4 @@
-Applying this manifest will start **Ubuntu Linux 22.04 LTS (Jammy Jellyfish)**
+Applying this manifest will start **Ubuntu Linux 20.04 LTS (Focal Fossa)**
 with a default set of **CVMFS** repositories mounted and a default setup script
 sourced at boot time. You can changed both in the relevant input fields.
 
