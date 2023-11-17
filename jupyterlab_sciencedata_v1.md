@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI** and kernels for Python, R and Julia.
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI** and kernels for Python, R, Julia and ROOT.
 
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 

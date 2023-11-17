@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server** with kernels for Python, R, Julia and Mathematica.
+Applying this manifest will start a **Jupyter Notebook server** with kernels for Python, R, Julia, ROOT and **Mathematica**.
 
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 
