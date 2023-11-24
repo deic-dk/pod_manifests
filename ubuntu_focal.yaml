@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu
+  name: ubuntu-focal
   labels:
-    app: ubuntu
+    app: ubuntu-focal
 spec:
   containers:
   - name: ubuntu-focal

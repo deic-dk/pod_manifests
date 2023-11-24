@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu
+  name: ubuntu-jammy
   labels:
-    app: ubuntu
+    app: ubuntu-jammy
 spec:
   containers:
   - name: ubuntu-jammy
