@@ -24,3 +24,4 @@ Then reload the Jupyter web page.
 
 For Mathematica to work, you may need to shut down and restart the kernel ("Kernel"->"Shutdown", "Kernel"->"Restart").
 
+_Notice: MATLAB and Mathematica are only available to DTU staff and students._
