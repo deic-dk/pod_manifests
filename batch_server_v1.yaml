@@ -6,7 +6,7 @@ metadata:
     app: batch
 spec:
   containers:
-  - name: ubuntu-jammy-batch
+  - name: batch
     image: sciencedata/batch_server
     ports:
     - containerPort: 80
