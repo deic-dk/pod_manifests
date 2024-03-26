@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu-jammy-batch
+  name: batch
   labels:
-    app: ubuntu-jammy-batch
+    app: batch
 spec:
   containers:
   - name: ubuntu-jammy-batch
-    image: sciencedata/ubuntu_jammy_gridfactory_sciencedata
+    image: sciencedata/batch_server
     ports:
     - containerPort: 80
       protocol: TCP
