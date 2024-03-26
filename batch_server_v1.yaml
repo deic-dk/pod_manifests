@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-jammy-batch
+  labels:
+    app: ubuntu-jammy-batch
+spec:
+  containers:
+  - name: ubuntu-jammy-batch
+    image: sciencedata/ubuntu_jammy_gridfactory_sciencedata
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    - containerPort: 443
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: HOME_SERVER
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
