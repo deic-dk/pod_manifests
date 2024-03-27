@@ -18,6 +18,8 @@ spec:
     env:
     - name: SSH_PUBLIC_KEY
       value: ""
+    - name: USERNAME
+      value: "root"
     - name: HOME_SERVER
       value: ""
     - name: PUBLIC_HOME_SERVER
