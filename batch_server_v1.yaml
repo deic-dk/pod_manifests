@@ -20,6 +20,8 @@ spec:
       value: ""
     - name: USERNAME
       value: "root"
+    - name: SD_UID
+      value: ""
     - name: HOME_SERVER
       value: ""
     - name: PUBLIC_HOME_SERVER
