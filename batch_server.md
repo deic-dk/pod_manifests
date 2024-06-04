@@ -1,4 +1,4 @@
-Applying this manifest will start Ubuntu Linux 22.04 LTS (Jammy Jellyfish) - running the OpenSSH server and the **GridFactory** batch service.
+Applying this manifest will start Ubuntu Linux 22.04 LTS (Jammy Jellyfish) - running the OpenSSH server and the services making up a **GridFactory** batch server.
 
 By providing a public SSH key you can access your container via SSH.
 

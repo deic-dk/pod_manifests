@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: batch_worker
+  labels:
+    app: batch
+spec:
+  containers:
+  - name: batch_worker
+    image: sciencedata/batch_worker
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    - containerPort: 443
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "root"
+    - name: SD_UID
+      value: ""
+    - name: HOME_SERVER
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: PEERS
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
