@@ -9,10 +9,6 @@ spec:
   - name: batch-worker
     image: sciencedata/batch_worker
     ports:
-    - containerPort: 80
-      protocol: TCP
-    - containerPort: 443
-      protocol: TCP
     - containerPort: 22
       protocol: TCP
     env:
