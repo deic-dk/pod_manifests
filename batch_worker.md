@@ -1,4 +1,4 @@
-Applying this manifest will start Ubuntu Linux 22.04 LTS (Jammy Jellyfish) - running the OpenSSH server and a batch worker daemon (GridWorker), which will pull jobs from the list of **GridFactory**  batch servers configured in the text field below (host_name1:ip1,hostname2:ip2,...). By default, this field will contain any `batch_server` pod(s) you may be running, plus batch.sciencedata.dk.
+Applying this manifest will start Ubuntu Linux 22.04 LTS (Jammy Jellyfish) - running the OpenSSH server and a batch worker daemon (GridWorker), which will pull jobs from the list of **GridFactory**  batch servers configured in the text field below. The list of batch servers must be of the form: host_name1:ip1,hostname2:ip2,.... For fully qualified hostnames, the IP address may be left out. By default, this field will contain any `batch_server` pod(s) you may be running, plus batch.sciencedata.dk.
 
 By providing a public SSH key you can access your container via SSH.
 

@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: batch_server
+  name: batch-server
   labels:
     app: batch
 spec:
   containers:
-  - name: batch_server
+  - name: batch-server
     image: sciencedata/batch_server
     ports:
     - containerPort: 80

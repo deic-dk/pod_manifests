@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: batch_worker
+  name: batch-worker
   labels:
     app: batch
 spec:
   containers:
-  - name: batch_worker
+  - name: batch-worker
     image: sciencedata/batch_worker
     ports:
     - containerPort: 80
@@ -26,6 +26,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: PEERS_IMAGE
+      value: "batch_server"
     - name: PEERS
       value: ""
     securityContext:
