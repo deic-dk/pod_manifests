@@ -26,6 +26,10 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: ONLY_FROM
+      value: ""
+    - name: SSL_DN_HEADER
+      value: ""
     securityContext:
       capabilities:
         add:
