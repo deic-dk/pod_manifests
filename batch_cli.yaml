@@ -23,7 +23,7 @@ spec:
     - name: PUBLIC_HOME_SERVER
       value: ""
     - name: PEERS_IMAGE
-      value: "sciencedata/batch_cli"
+      value: "sciencedata/batch_server"
     - name: PEERS
       value: ""
     securityContext:
