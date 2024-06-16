@@ -30,6 +30,8 @@ spec:
       value: ""
     - name: SSL_DN_HEADER
       value: ""
+    - name: TRUSTED_VOS
+      value: ""
     securityContext:
       capabilities:
         add:
