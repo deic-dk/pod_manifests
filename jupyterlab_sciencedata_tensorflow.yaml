@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jupyter_tensorflow
+  name: jupyter-tensorflow
 spec:
   containers:
-  - name: jupyter_tensorflow
+  - name: jupyter-tensorflow
     image: sciencedata/jupyter_sciencedata_tensorflow
     ports:
     - containerPort: 8888
