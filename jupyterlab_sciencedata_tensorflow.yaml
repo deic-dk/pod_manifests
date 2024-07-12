@@ -22,6 +22,11 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
+    resources:
+      limits:
+        nvidia.com/gpu: 1
+  runtimeClassName: nvidia   #<--- USE THE NVIDIA CONTAINER RUNTIME
+  nodeName: worker1
     securityContext:
       capabilities:
         add:
