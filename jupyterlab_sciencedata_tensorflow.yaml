@@ -25,7 +25,7 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-  runtimeClassName: nvidia   #<--- USE THE NVIDIA CONTAINER RUNTIME
+  runtimeClassName: nvidia
   nodeName: worker1
     securityContext:
       capabilities:
