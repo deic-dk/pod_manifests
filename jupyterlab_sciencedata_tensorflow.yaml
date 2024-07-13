@@ -25,12 +25,12 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-  runtimeClassName: nvidia
-  nodeName: worker1
     securityContext:
       capabilities:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
+  runtimeClassName: nvidia
+  nodeName: worker1
 
