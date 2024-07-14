@@ -11,7 +11,7 @@ The pod comes with a minimal amount of software installed - plus what's necessar
 to run the (CERN centric) software packages of the default setup script.
 
 The idea is to use software from "/cvmfs/*" to process data that can be conveniently
-kept on ScienceData and accessed via unauthenticated HTTPS at https://sciencedata/files/.
+kept on ScienceData and accessed via unauthenticated HTTPS at https&colon;//sciencedata/files/.
 
 Installing more software with `apt` is possible, but notice that it will be gone
 once the pod is shut down or restarted.
