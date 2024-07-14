@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jupyter-tensorflow
+spec:
+  containers:
+  - name: jupyter-tensorflow
+    image: sciencedata/jupyter_sciencedata_tensorflow:2.15.0
+    ports:
+    - containerPort: 8888
+      protocol: TCP
+    env:
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_USER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: SD_GID
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "8888"
+    - name: FILE
+      value: ""
+    - name: CUDA_VISIBLE_DEVICES
+      value: "2"
+    resources:
+      limits:
+        nvidia.com/gpu: 1
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  runtimeClassName: nvidia
+  nodeName: worker1
+

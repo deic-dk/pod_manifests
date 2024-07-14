@@ -1,4 +1,6 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI** with a Python kernel and CUDA-enabled tensorflow tools and libraries.
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled TensorFlow-2.15 tools and libraries** (two enabled GPUs).
+
+Use this image to run the examples from https://www.tensorflow.org/tutorials
 
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 
