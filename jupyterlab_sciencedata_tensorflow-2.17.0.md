@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled TensorFlow-2.17 tools and libraries** (two enabled GPUs).
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled TensorFlow-2.17 tools and libraries** (4 enabled GPUs).
 
 Notice that using this image to run the official TensorFlow examples will result in errors because of API changes.
 
