@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter-tensorflow
-    image: sciencedata/jupyter_sciencedata_tensorflow:2.15.0
+    image: sciencedata/jupyter_sciencedata_tensorflow
     ports:
     - containerPort: 8888
       protocol: TCP
