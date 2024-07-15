@@ -26,7 +26,7 @@ spec:
       value: "2"
     resources:
       limits:
-        nvidia.com/gpu: 1
+        nvidia.com/gpu: 2
     securityContext:
       capabilities:
         add:
