@@ -30,6 +30,8 @@ spec:
       value: "/usr/local/software"
     - name: POD_HTTP_PORT
       value: "8888"
+    - name: FILE
+      value: ""
     securityContext:
       capabilities:
         add:
