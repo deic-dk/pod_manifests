@@ -41,7 +41,8 @@ spec:
     lifecycle:
       postStart:
         exec:
-          command: ["/bin/bash", "-c", "curl --insecure https://sciencedata/files/mathpass > /home/sciencedata/.WolframEngine/Licensing/mathpass >& /dev/null || echo 'no mathpass'"]
+          command: ["/bin/bash", "-c", "mkdir -p /home/sciencedata/.WolframEngine/Licensing/"]
+          command: ["/bin/bash", "-c", "curl --insecure https://sciencedata/files/mathpass -o /home/sciencedata/.WolframEngine/Licensing/mathpass >& /dev/null || echo 'no mathpass'"]
       preStop:
         exec:
           command: ["/bin/bash","-c","[ -s /home/sciencedata/.WolframEngine/Licensing/mathpass ] && curl --insecure --upload /home/sciencedata/.WolframEngine/Licensing/mathpass https://sciencedata/files/mathpass"]
