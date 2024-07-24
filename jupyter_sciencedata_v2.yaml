@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter
-    image: sciencedata/jupyter_sciencedata_custom:1.2
+    image: sciencedata/jupyter_sciencedata_custom:2.0
     ports:
     - containerPort: 8888
       protocol: TCP
@@ -32,8 +32,6 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
-    - name: JUPYTER_ENABLE_LAB
-      value: "true"
     securityContext:
       capabilities:
         add:
