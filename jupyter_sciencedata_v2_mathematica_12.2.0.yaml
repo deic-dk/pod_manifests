@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter-mathematica
-    image: sciencedata/jupyter_sciencedata_custom:1.2
+    image: sciencedata/jupyter_sciencedata_custom:2.0
     ports:
     - containerPort: 8888
       protocol: TCP
