@@ -31,6 +31,8 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 2
+    imagePullSecrets:
+    - name: regcred
     securityContext:
       capabilities:
         add:
