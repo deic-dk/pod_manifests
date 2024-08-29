@@ -31,14 +31,14 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 2
-    imagePullSecrets:
-    - name: regcred
     securityContext:
       capabilities:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
+  imagePullSecrets:
+  - name: regcred
   runtimeClassName: nvidia
   nodeName: worker1
   restartPolicy: Never
