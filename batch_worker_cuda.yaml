@@ -40,5 +40,5 @@ spec:
   imagePullSecrets:
   - name: regcred
   runtimeClassName: nvidia
-  nodeName: worker1
+  nodeName: peon145
   restartPolicy: Never
