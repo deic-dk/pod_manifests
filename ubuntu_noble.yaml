@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble
+  labels:
+    app: ubuntu-noble
+spec:
+  containers:
+  - name: ubuntu-noble
+    image: sciencedata/ubuntu_noble_sciencedata
+    ports:
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "root"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  securityContext:
+    sysctls:
+    - name: "net.ipv4.ping_group_range"
+      value: "0 2147483647"
+  restartPolicy: Never
