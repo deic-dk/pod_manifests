@@ -1,4 +1,4 @@
-Applying this manifest will start **A pod running Nextcloud on top of Caddy, inside Ubuntu 24.04.**.
+Applying this manifest will start **A pod running Nextcloud on top of Caddy, inside Ubuntu 24.04**.
 
 This pod is for testing only: The database backend is SQLite running off a file in NFS.
 
