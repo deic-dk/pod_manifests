@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nextcloud
+  name: nextcloud_dev
   labels:
-    app: nextcloud
+    app: nextcloud_dev
 spec:
   containers:
-  - name: nextcloud
-    image: sciencedata/nextcloud
+  - name: nextcloud_dev
+    image: sciencedata/nextcloud_dev
     volumeMounts:
       - name: sciencedata
-        mountPath: "/var/www/nextcloud/data"
+        mountPath: "/var/www"
     ports:
     - containerPort: 80
       protocol: TCP
