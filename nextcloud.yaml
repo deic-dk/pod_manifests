@@ -25,6 +25,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: HTTPS_PORT
+      value: ""
     securityContext:
       capabilities:
         add:
