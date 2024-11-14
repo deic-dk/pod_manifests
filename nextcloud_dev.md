@@ -12,7 +12,7 @@ The directory `/var/www/` is mounted from your ScienceData home server. The path
 
 If the folder you mount is empty, it will be populated by a standard Nextcloud installation with minimal apps. If it is populated, it is assumed that this is from a previous installation and nothing will be changed - i.e. your files and the SQLite database with file information etc. will be kept.
 
-NOTICE: The above implies that on a first launch, you'll should have patience, as installing Nextcloud on an NFS volume will take minutes. Also, it is not adviced to run more than one pod off the same directory with this image.
+NOTICE: The above implies that on a first launch, you'll need patience, as installing Nextcloud on an NFS volume will take minutes. Also, it is not advised to run more than one pod off the same directory with this image.
 
 By providing a public SSH key you can access your pod via SSH.
 
