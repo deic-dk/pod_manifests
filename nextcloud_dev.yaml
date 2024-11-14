@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nextcloud_dev
+  name: nextcloud-dev
   labels:
-    app: nextcloud_dev
+    app: nextcloud-dev
 spec:
   containers:
-  - name: nextcloud_dev
+  - name: nextcloud-dev
     image: sciencedata/nextcloud_dev
     volumeMounts:
       - name: sciencedata
