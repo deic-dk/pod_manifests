@@ -1,4 +1,4 @@
-Applying this manifest will start **A pod running Nextcloud on top of Caddy on Ubuntu 24.04**.
+Applying this manifest will start **A pod running Nextcloud-30.0.2 on top of Caddy on Ubuntu 24.04**.
 
 Nextcloud is installed in `/var/www/nextcloud/nextcloud`. Data is kept in `/var/www/nextcloud/data`.
 

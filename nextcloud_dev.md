@@ -1,4 +1,4 @@
-Applying this manifest will start **A pod running Nextcloud on top of Caddy, on Ubuntu 24.04**.
+Applying this manifest will start **A pod running Nextcloud-30.0.2 on top of Caddy, on Ubuntu 24.04**.
 
 This pod is for development only. A first deployment will take 30+ minutes.
 
