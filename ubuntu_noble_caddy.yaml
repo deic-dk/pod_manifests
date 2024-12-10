@@ -23,6 +23,8 @@ spec:
       value: "www"
     - name: HOME_SERVER
       value: ""
+    - name: SD_UID
+      value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
     securityContext:

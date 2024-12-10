@@ -18,6 +18,8 @@ spec:
       value: "root"
     - name: HOME_SERVER
       value: ""
+    - name: SD_UID
+      value: ""
     securityContext:
       capabilities:
         add:

@@ -25,6 +25,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: SD_UID
+      value: ""
     securityContext:
       capabilities:
         add:

@@ -12,8 +12,6 @@ spec:
     env:
     - name: HOME_SERVER
       value: ""
-    - name: SD_USER
-      value: ""
     - name: SD_UID
       value: ""
     - name: SD_GID

@@ -16,6 +16,8 @@ spec:
       value: "sciencedata"
     - name: HOME_SERVER
       value: ""
+    - name: SD_UID
+      value: ""
     - name: SETUP_SCRIPT
       value: "/cvmfs/sft.cern.ch/lcg/views/LCG_104/x86_64-ubuntu2004-gcc9-opt/setup.sh"
     - name: CVMFS_REPOS
