@@ -34,6 +34,8 @@ spec:
       value: ""
     - name: RTE_URLS
       value: ""
+    - name: MY_HOSTNAME
+      value: ""
     securityContext:
       capabilities:
         add:
