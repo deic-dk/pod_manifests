@@ -36,6 +36,8 @@ spec:
       value: ""
     - name: MY_HOSTNAME
       value: ""
+    - name: ADMIN_SUBJECT
+      value: ""
     securityContext:
       capabilities:
         add:
