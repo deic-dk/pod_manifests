@@ -32,6 +32,8 @@ spec:
       value: ""
     - name: TRUSTED_VOS
       value: ""
+    - name: MY_VOS
+      value: ""
     - name: RTE_URLS
       value: ""
     - name: MY_HOSTNAME

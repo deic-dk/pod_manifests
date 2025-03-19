@@ -26,6 +26,8 @@ spec:
       value: "sciencedata/batch_server"
     - name: PEERS
       value: ""
+    - name: MY_VOS
+      value: "https://batch/vos/default.txt"
     securityContext:
       capabilities:
         add:
