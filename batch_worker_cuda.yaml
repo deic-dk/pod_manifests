@@ -31,7 +31,7 @@ spec:
     - name: KEY_PASSWORD
       value: "grid"
     - name: UNENCRYPTED_KEY
-      value: true
+      value: "true"
     resources:
       limits:
         nvidia.com/gpu: 2
