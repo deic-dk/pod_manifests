@@ -15,7 +15,7 @@ spec:
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: USERNAME
-      value: "root"
+      value: "gridfactory"
     - name: SD_UID
       value: ""
     - name: HOME_SERVER
@@ -28,6 +28,10 @@ spec:
       value: ""
     - name: MY_VOS
       value: "https://batch/vos/default.txt"
+    - name: KEY_PASSWORD
+      value: "grid"
+    - name: UNENCRYPTED_KEY
+      value: true
     securityContext:
       capabilities:
         add:

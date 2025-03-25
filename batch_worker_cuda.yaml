@@ -15,7 +15,7 @@ spec:
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: USERNAME
-      value: "root"
+      value: "gridfactory"
     - name: SD_UID
       value: ""
     - name: HOME_SERVER
@@ -28,6 +28,10 @@ spec:
       value: ""
     - name: CUDA_VISIBLE_DEVICES
       value: ""
+    - name: KEY_PASSWORD
+      value: "grid"
+    - name: UNENCRYPTED_KEY
+      value: true
     resources:
       limits:
         nvidia.com/gpu: 2
