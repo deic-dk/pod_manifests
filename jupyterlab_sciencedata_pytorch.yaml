@@ -4,7 +4,7 @@ metadata:
   name: jupyter-pytorch
 spec:
   containers:
-  - name: jupyter-tensorflow
+  - name: jupyter-pytorch
     image: sciencedata/jupyter_sciencedata_pytorch
     ports:
     - containerPort: 8888
