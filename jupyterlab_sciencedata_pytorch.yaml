@@ -6,6 +6,9 @@ spec:
   containers:
   - name: jupyter-pytorch
     image: sciencedata/jupyter_sciencedata_pytorch
+    volumeMounts:
+      - mountPath: /dev/shm
+        name: dshm
     ports:
     - containerPort: 8888
       protocol: TCP
@@ -32,6 +35,10 @@ spec:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
+  volumes:
+  - name: dshm
+    emptyDir:
+      medium: Memory
   runtimeClassName: nvidia
   nodeName: worker1
 
