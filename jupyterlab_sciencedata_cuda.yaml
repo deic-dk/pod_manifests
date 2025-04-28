@@ -50,7 +50,7 @@ spec:
       medium: Memory
   - name: nfs-claim-sciencedata-cloud-ml
     persistentVolumeClaim:
-      claimName: nfs-10.0.0.13-cloud-ml
+      claimName: nfs-claim-10.0.0.13-cloud-ml
   runtimeClassName: nvidia
   nodeName: worker1
   restartPolicy: Never
