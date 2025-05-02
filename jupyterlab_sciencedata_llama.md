@@ -1,5 +1,16 @@
 Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled Python kernel** (4 enabled GPUs).
 
+The following Llama-4 checkpoints are downloaded and available:
+
+- Llama-4-Maverick-17B-128E
+- Llama-4-Scout-17B-16E-Instruct
+
+Notice that to run them, you need to be logged in to huggingface.co and have requested and have been granted access to the gated repo in question.
+
+The following models have been downloaded with `ollama`:
+
+ 
+
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 
 Notebooks are loaded and saved from and to your ScienceData home folder, i.e. what you see in the file browser is the same as what you see in the ScienceData files view ("Home").
