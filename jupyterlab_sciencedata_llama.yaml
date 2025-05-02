@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: jupyterlab-cuda
-    image: sciencedata/jupyter_sciencedata_cuda
+    image: sciencedata/jupyter_sciencedata_llama
     ports:
     - containerPort: 22
       protocol: TCP
