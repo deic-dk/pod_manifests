@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jupyterlab-cuda
+  name: jupyterlab-llama
   labels:
     app: batch
 spec:
   containers:
-  - name: jupyterlab-cuda
+  - name: jupyterlab-llama
     image: sciencedata/jupyter_sciencedata_llama
     ports:
     - containerPort: 22
