@@ -28,11 +28,11 @@ spec:
       value: ""
     - name: JUPYTER_ENABLE_LAB
       value: "true"
-    - name: CUDA_VISIBLE_DEVICES
-      value: ""
+    - name: CUDA_VISIBLE_DEVICES_NUM
+      value: "4"
     resources:
       limits:
-        nvidia.com/gpu: 2
+        nvidia.com/gpu: 4
     securityContext:
       capabilities:
         add:

@@ -20,8 +20,6 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
-    - name: CUDA_VISIBLE_DEVICES
-      value: ""
     resources:
       limits:
         nvidia.com/gpu: 2
