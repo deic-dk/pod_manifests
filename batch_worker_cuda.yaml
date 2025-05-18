@@ -25,11 +25,13 @@ spec:
     - name: PEERS_IMAGE
       value: "sciencedata/batch_server"
     - name: PEERS
-      value: "4"
+      value: ""
     - name: KEY_PASSWORD
       value: "grid"
     - name: UNENCRYPTED_KEY
       value: "true"
+    - name: CUDA_VISIBLE_DEVICES_NUM
+      value: "4"
     resources:
       limits:
         nvidia.com/gpu: 4
