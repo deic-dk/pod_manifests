@@ -12,8 +12,8 @@ spec:
     - containerPort: 22
       protocol: TCP
     env:
-#    - name: SSH_PUBLIC_KEY
-#      value: ""
+    - name: SSH_PUBLIC_KEY
+      value: ""
     - name: USERNAME
       value: "sciencedata"
     - name: SD_UID
