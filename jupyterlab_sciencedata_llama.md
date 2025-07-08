@@ -13,23 +13,23 @@ lrwxrwxrwx 1 sciencedata users 20 Jun 22 21:06 ./.ollama -> /usr/local/ml/ollama
 lrwxrwxrwx 1 sciencedata users 19 Jun 22 21:06 ./.llama -> /usr/local/ml/llama
 ```
 
-The following Llama-4 checkpoints are downloaded and available to be run with [torchrun](https://github.com/meta-llama/llama-models/?tab=readme-ov-file):
+The following Llama-4 checkpoints are already downloaded and available to be run with [torchrun](https://github.com/meta-llama/llama-models/?tab=readme-ov-file):
 
-- Llama-4-Maverick-17B-128E
-- Llama-4-Scout-17B-16E-Instruct
+- **Llama-4-Maverick-17B-128E**
+- **Llama-4-Scout-17B-16E-Instruct**
 
-The following models Llama-4 checkpoints are downloaded and available to be run with [transformers](https://huggingface.co/blog/llama4-release):
+The following models Llama-4 checkpoints are already downloaded and available to be run with [transformers](https://huggingface.co/blog/llama4-release):
 
-- Llama-4-Scout-17B-16E-Instruct
+- **Llama-4-Scout-17B-16E-Instruct**
 
 _Notice that to run them, you need to be logged in to huggingface.co and have requested and have been granted access to the gated repo in question._
 
-The following models Llama-4 checkpoints are downloaded and available to be run with [ollama](https://ollama.com/):
+The following models Llama-4 checkpoints are already downloaded and available to be run with [ollama](https://ollama.com/):
 
-- deepseek-r1
-- llama4
+- **deepseek-r1**
+- **llama4**
 
-_Notice that when running `ollama` you'll be using the SSH credentials in the files `.ollama/id_ed25519`, `.ollama/id_ed25519.pub`. These belong to the shared Ollama account "sciencedata".
+_Notice that when running `ollama` you'll be using the SSH credentials in the files `.ollama/id_ed25519`, `.ollama/id_ed25519.pub`. These belong to the shared Ollama account "sciencedata"._
 
 --- 
 
