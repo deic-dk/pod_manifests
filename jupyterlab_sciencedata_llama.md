@@ -29,7 +29,7 @@ The following models Llama-4 checkpoints are already downloaded and available to
 - **deepseek-r1**
 - **llama4**
 
-_Notice that when running `ollama` you'll be using the SSH credentials in the files `.ollama/id_ed25519`, `.ollama/id_ed25519.pub`. These belong to the shared Ollama account "sciencedata"._
+_Notice that when running ollama, you'll be using the SSH credentials in the files ".ollama/id_ed25519", ".ollama/id_ed25519.pub". These belong to the shared Ollama account "sciencedata"._
 
 --- 
 
