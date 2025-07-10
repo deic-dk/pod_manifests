@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jupyterlab-llama
+  name: jupyterlab-unsloth
   labels:
-    app: llama
+    app: unsloth
 spec:
   containers:
-  - name: jupyterlab-llama
-    image: sciencedata/jupyter_sciencedata_llama
+  - name: jupyterlab-unsloth
+    image: sciencedata/jupyter_sciencedata_unsloth
     ports:
     - containerPort: 22
       protocol: TCP
