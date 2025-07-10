@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled Python kernel and unsloth installed** (4 enabled GPUs).
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled Python kernel (4 enabled GPUs) and unsloth installed**.
 
 _NOTICE: Until we procure modern GPUs, only Ollama works._
 _NOTICE: The Python version is 3.11._

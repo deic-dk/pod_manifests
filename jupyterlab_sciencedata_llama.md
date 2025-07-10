@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled Python kernel and common LLM/Llama tools installed** (4 enabled GPUs).
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled (4 enabled GPUs) Python kernel and common LLM/Llama tools installed**.
 
 _NOTICE: Until we procure modern GPUs, only Ollama works._
 _NOTICE: The Python version is 3.10._
