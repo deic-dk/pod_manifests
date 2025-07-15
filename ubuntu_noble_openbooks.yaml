@@ -12,7 +12,7 @@ spec:
       - name: sciencedata
         mountPath: "/home/openbooks/ebooks"
     ports:
-    - containerPort: 80
+    - containerPort: 8080
       protocol: TCP
     - containerPort: 22
       protocol: TCP
@@ -27,6 +27,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: POD_HTTP_PORT
+      value: "8080"
     securityContext:
       capabilities:
         add:
