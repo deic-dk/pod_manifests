@@ -6,7 +6,7 @@ If a folder named `cron.d` is found in the top-level mounted partition, `/etc/cr
 
 ```
 cat /home/sciencedata/mnt/cron.d/test
-*/5 * * * * root /home/sciencedata/mnt/myscript.sh
+*/5 * * * * sciencedata /home/sciencedata/mnt/myscript.sh
 ```
 
 ```
