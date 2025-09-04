@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-cron
+  labels:
+    app: ubuntu-noble-cron
+spec:
+  containers:
+  - name: ubuntu-noble-cron
+    image: sciencedata/ubuntu_noble_cron_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/home/sciencedata/mnt"
+    ports:
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "sciencedata"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "8080"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
