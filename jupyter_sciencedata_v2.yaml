@@ -32,7 +32,7 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
-    - name: PREFERRED_DIR
+    - name: ROOT_DIR
       value: "/home/sciencedata"
     securityContext:
       capabilities:
