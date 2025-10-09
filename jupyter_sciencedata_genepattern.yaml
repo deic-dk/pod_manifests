@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jupyter
+spec:
+  containers:
+  - name: jupyter
+    image: sciencedata/jupyter_sciencedata_genepattern
+    ports:
+    - containerPort: 8888
+      protocol: TCP
+    env:
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "8888"
+    - name: FILE
+      value: ""
+    - name: NOTEBOOK_DIR
+      value: "/home/sciencedata"
+    - name: ROOT_DIR
+      value: "/home/sciencedata"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+
