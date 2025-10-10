@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jupyter
+  name: genepattern
 spec:
   containers:
-  - name: jupyter
+  - name: genepattern
     image: sciencedata/jupyter_sciencedata_genepattern
     ports:
     - containerPort: 8888
