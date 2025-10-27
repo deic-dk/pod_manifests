@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-jellyfin
+  labels:
+    app: ubuntu-noble-jellyfin
+spec:
+  containers:
+  - name: ubuntu-noble-jellyfin
+    image: sciencedata/ubuntu_noble_jellyfin_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/home/jellyfin/media"
+    ports:
+    - containerPort: 8096
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "jellyfin"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "8096"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
