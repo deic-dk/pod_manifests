@@ -12,18 +12,7 @@ cp -r /var/lib/caddy/files/* /var/www/
 
 Then visit the URL BASE_URL/files.php, where BASE_URL is the URL you can read in the column `view` below.
 
-To not have your web root world read/writeable, you should add a user and set a password. This is done by renaming "files.php" to "config.php",
-
-```
-mv /var/www/files.php /var/www/config.php 
-```
-
-and visiting BASE_URL/config.php. After you've finished the configuration, rename back to "files.php":
-
-
-```
-mv /var/www/config.php /var/www/files.php 
-```
+To not have your web root world read/writeable, you should add a user and set a password. This is done by editing the file "config/config.php".
 
 By providing a public SSH key you can access your container via SSH.
 
