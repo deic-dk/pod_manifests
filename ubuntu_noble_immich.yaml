@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-immich
+  labels:
+    app: ubuntu-noble-immich
+spec:
+  containers:
+  - name: ubuntu-noble-immich
+    image: sciencedata/ubuntu_noble_immich_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/var/lib/immich/home/media"
+    ports:
+    - containerPort: 2283
+      protocol: TCP
+    - containerPort: 3003
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "immich"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "2283"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
