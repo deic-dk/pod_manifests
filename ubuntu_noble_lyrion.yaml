@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-lyrion
+  labels:
+    app: ubuntu-noble-lyrion
+spec:
+  containers:
+  - name: ubuntu-noble-lyrion
+    image: sciencedata/ubuntu_noble_lyrion_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/home/lyrion/music"
+    ports:
+    - containerPort: 9000
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "lyrion"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: POD_HTTP_PORT
+      value: "9000"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never
