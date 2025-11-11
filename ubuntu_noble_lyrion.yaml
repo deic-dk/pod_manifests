@@ -29,6 +29,8 @@ spec:
       value: ""
     - name: POD_HTTP_PORT
       value: "9000"
+    - name: POD_EXTRA_PORT
+      value: "2383"
     securityContext:
       capabilities:
         add:
