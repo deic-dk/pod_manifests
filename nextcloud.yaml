@@ -10,7 +10,7 @@ spec:
     image: sciencedata/nextcloud
     volumeMounts:
       - name: sciencedata
-        mountPath: "/var/www/nextcloud/data"
+        mountPath: "/var/www/data"
     ports:
     - containerPort: 80
       protocol: TCP

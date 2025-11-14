@@ -1,10 +1,10 @@
 Applying this manifest will start **A pod running Nextcloud-30.0.2 on top of Caddy on Ubuntu 24.04**.
 
-Nextcloud is installed in `/var/www/nextcloud/nextcloud`. Data is kept in `/var/www/nextcloud/data`.
+Nextcloud is installed in `/var/www/nextcloud/`. Data is kept in `/var/www/data`.
 
-The latter directory is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/` on your ScienceData home server](/storage/). Read more on the storage service [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
+The latter directory is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to either your homedir, [`/files/`](/index.php/apps/files), or [`/storage/`](/storage/) on your ScienceData home server. In the former case, it is mounted read-only. Read more on `/storage/` [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
-The database backend is SQLite running off a file in NFS, i.e. quite slow. Moreover, on launch, files are scanned and the database brought up to date. This is a time-consuming process - implying that it'll take a minute or more for the web interface to come up.
+The database backend is SQLite running off a file in the volatile pod filesystem and copied over to `owncloud.db.gz` in the root of your ScienceData homedir when the pod is deleted. If `owncloud.db.gz` exists in this location it is fetched and unpacked when a new pod is created. Notice that if you change which directory is mounted, you should also delete `owncloud.db.gz` - which will then be recreated when the new files are automatically scanned.
 
 By providing a public SSH key you can access your pod via SSH.
 
