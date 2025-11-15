@@ -2,7 +2,7 @@ Applying this manifest will start **A pod running Nextcloud-30.0.2 on top of Cad
 
 This pod is for development only. A first deployment will take 30+ minutes.
 
-For a quicker test deployment, use the image `nextcloud`.
+For a quicker deployment, use the image `nextcloud`.
 
 Nextcloud is installed in `/var/www/nextcloud/nextcloud`. Data is kept in `/var/www/nextcloud/data`.
 
