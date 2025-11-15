@@ -29,6 +29,8 @@ spec:
       value: ""
     - name: HTTPS_PORT
       value: ""
+    - name: NFS_RW
+      value: "yes"
     securityContext:
       capabilities:
         add:
