@@ -16,6 +16,10 @@ spec:
       protocol: TCP
     - containerPort: 22
       protocol: TCP
+    - containerPort: 3483
+      protocol: TCP
+    - containerPort: 3483
+      protocol: UDP
     env:
     - name: SSH_PUBLIC_KEY
       value: ""
