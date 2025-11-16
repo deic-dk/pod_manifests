@@ -4,8 +4,6 @@ Nextcloud is installed in `/var/www/nextcloud/`. The directory `/var/www/data` i
 
 If you choose to mount from `/storage/`, data is kept in the mounted directory `/var/www/data` and is thus persistent across deleting and recreating the pod.
 
-If you choose to mount from `/files/`
-
 If you choose `/files/`, a user `kube` is created. You can set the password of this user from the admin account. A softlink, named "sciencedata" is created in the homedir of the user `kube` to `/var/www/data` (mounted from ScienceData). This  allows you to view files (read-only) from your ScienceData homedir.
 
 The database backend is SQLite running off a file in the volatile pod filesystem and copied over to `owncloud.db.gz` in the root of your ScienceData homedir when the pod is deleted. If `owncloud.db.gz` exists in this location it is fetched and unpacked when a new pod is created. Notice that if you change which directory is mounted, before starting a new pod, you should also delete `owncloud.db.gz` in your ScienceData homedir.
