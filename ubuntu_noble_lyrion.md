@@ -8,6 +8,8 @@ To keep music across pod deletion/creation, choose the location of your music fo
 
 When deleting a pod, your `cache` and `prefs` directories will be copied to `lyrion_config.tar.gz` in your ScienceData home folder. When firing up the image again, this archive, if present, will be copied over and used - and thus you'll continue where you left.
 
+To allow connecting clients (music players), the pod serves data on port 9000 (web frontend and audio streams) and 3483 (API). These ports are reverse proxied on the external ports listed in the field "external ports". If you're the only one running this pod, your external ports will also be 9000 (TCP) and 3483 (UDP and TCP) - making it straight forward to connect clients. If not, you may have to set up port forwarding in your end, as clients typically use hard-coded port numbers 9000 and 3483.
+
 By providing a public SSH key you can access your container via SSH.
 
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
