@@ -29,6 +29,8 @@ spec:
       value: ""
     - name: POD_HTTP_PORT
       value: "8080"
+    - name: NFS_RW
+      value: "yes"
     securityContext:
       capabilities:
         add:
