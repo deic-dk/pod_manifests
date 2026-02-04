@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: debian_ssh_rsync
+  name: debian-ssh-rsync
   labels:
-    app: debian_ssh_rsync
+    app: debian-ssh-rsync
     user: otto@codeberg.org
 spec:
   containers:
-  - name: debian_ssh_rsync
+  - name: debian-ssh-rsync
     image: codeberg.org/codeberg-infrastructure/backup
     volumeMounts:
       - name: sciencedata
