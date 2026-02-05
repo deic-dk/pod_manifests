@@ -19,15 +19,13 @@ spec:
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: USERNAME
-      value: ""
+      value: "data"
     - name: HOME_SERVER
       value: ""
     - name: SD_UID
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
-    - name: USERNAME
-      value: "data"
     securityContext:
       capabilities:
         add:
