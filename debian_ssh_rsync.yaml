@@ -26,10 +26,16 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: USERNAME
+      value: "data"
     securityContext:
       capabilities:
         add:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
+    lifecycle:
+      postStart:
+        exec:
+          command: ["/bin/bash", "-c", "mkdir -p /home/sciencedata/.WolframEngine/Licensing/"]
   restartPolicy: Never
