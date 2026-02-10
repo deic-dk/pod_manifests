@@ -27,6 +27,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: POD_EXTRA_PORT
+      value: "22"
     securityContext:
       capabilities:
         add:
