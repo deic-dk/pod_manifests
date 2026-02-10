@@ -33,8 +33,4 @@ spec:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
-    lifecycle:
-      postStart:
-        exec:
-          command: ["/bin/bash", "-c", "mkdir -p /home/sciencedata/.WolframEngine/Licensing/"]
   restartPolicy: Never
