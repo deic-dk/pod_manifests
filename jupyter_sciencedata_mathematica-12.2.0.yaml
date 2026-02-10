@@ -32,6 +32,8 @@ spec:
       value: "8888"
     - name: FILE
       value: ""
+    - name: PATH
+      value: "/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/sciencedata/.local/bin"
     securityContext:
       capabilities:
         add:

@@ -11,13 +11,13 @@ The image is pulled from our Docker registry. Build recipes are available on [Gi
 To enable MATLAB, run the command below in a shell inside the pod/container:
 
 ```
-export SETUP_MATLAB=true && /usr/local/bin/start-notebook.d/setup-software.sh
+export SETUP_MATLAB=true && /usr/local/bin/start-notebook.d/matlabe.sh
 ```
 
 To enable Mathematica, run the command below in a shell inside the pod/container:
 
 ```
-export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/setup-software.sh
+export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/mathematica.sh
 ```
 
 Then reload the Jupyter web page.

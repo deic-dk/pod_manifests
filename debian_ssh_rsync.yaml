@@ -4,8 +4,8 @@ metadata:
   name: debian-ssh-rsync
   labels:
     app: debian-ssh-rsync
-    domain: dtu.dk
-    user: fror
+    domain: codeberg.org
+    user: otto
 spec:
   containers:
   - name: debian-ssh-rsync
