@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: jupyter-matlab
-    image: sciencedata/jupyter_sciencedata_custom:3.0
+    image: sciencedata/jupyter_sciencedata_custom
     ports:
     - containerPort: 8888
       protocol: TCP
