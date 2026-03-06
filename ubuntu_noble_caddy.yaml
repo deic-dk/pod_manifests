@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-noble-caddy
   labels:
     app: ubuntu-noble-caddy
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-noble-caddy

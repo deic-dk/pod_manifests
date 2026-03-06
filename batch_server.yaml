@@ -4,6 +4,7 @@ metadata:
   name: batch-server
   labels:
     app: batch
+    types: small-medium-large
 spec:
   containers:
   - name: batch-server

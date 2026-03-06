@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: jupyter-pytorch
+  labels:
+    types: small-medium-large-gpu1-gpu4
 spec:
   containers:
   - name: jupyter-pytorch
@@ -24,11 +26,11 @@ spec:
     - name: FILE
       value: ""
     - name: CUDA_VISIBLE_DEVICES_NUM
-      value: "4"
+      value: "0"
     resources:
       limits:
-        nvidia.com/gpu: 4
-        memory: 10Gi
+        nvidia.com/gpu: 0
+        memory: 1Gi
     securityContext:
       capabilities:
         add:
@@ -39,6 +41,6 @@ spec:
   - name: dshm
     emptyDir:
       medium: Memory
-  runtimeClassName: nvidia
-  nodeName: worker1
+  #runtimeClassName: nvidia
+  #nodeName: worker1
 

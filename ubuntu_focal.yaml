@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-focal
   labels:
     app: ubuntu-focal
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-focal

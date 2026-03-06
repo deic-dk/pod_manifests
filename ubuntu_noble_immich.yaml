@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-noble-immich
   labels:
     app: ubuntu-noble-immich
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-noble-immich
@@ -38,4 +39,4 @@ spec:
           - "AUDIT_WRITE"
           - "NET_ADMIN"
   restartPolicy: Never
-  nodeName: worker1
+  #nodeName: worker1

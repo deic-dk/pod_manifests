@@ -4,6 +4,7 @@ metadata:
   name: batch-worker-cuda-whisper
   labels:
     app: batch
+    types: small-medium-large-gpu1-gpu4
 spec:
   containers:
   - name: batch-worker-cuda-whisper
@@ -41,5 +42,5 @@ spec:
   restartPolicy: Never
   imagePullSecrets:
   - name: regcred
-  runtimeClassName: nvidia
-  nodeName: worker1
+  #runtimeClassName: nvidia
+  #nodeName: worker1

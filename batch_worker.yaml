@@ -4,6 +4,7 @@ metadata:
   name: batch-worker
   labels:
     app: batch
+    types: small-medium-large
 spec:
   containers:
   - name: batch-worker

@@ -4,6 +4,7 @@ metadata:
   name: nextcloud
   labels:
     app: nextcloud
+    types: small-medium-large
 spec:
   containers:
   - name: nextcloud

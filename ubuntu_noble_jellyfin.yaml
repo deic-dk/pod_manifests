@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-noble-jellyfin
   labels:
     app: ubuntu-noble-jellyfin
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-noble-jellyfin

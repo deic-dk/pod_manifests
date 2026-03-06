@@ -6,6 +6,7 @@ metadata:
     app: debian-ssh-rsync
     domain: codeberg.org
     user: otto
+    types: small-medium-large
 spec:
   containers:
   - name: debian-ssh-rsync

@@ -29,6 +29,6 @@ spec:
           - "SYS_CHROOT"
           - "AUDIT_WRITE"
           - "NET_ADMIN"
-  runtimeClassName: nvidia
-  nodeName: worker1
+  #runtimeClassName: nvidia
+  #nodeName: worker1
 

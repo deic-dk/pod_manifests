@@ -4,6 +4,7 @@ metadata:
   name: batch-worker-cuda
   labels:
     app: batch
+    types: small-medium-large-gpu1-gpu4
 spec:
   containers:
   - name: batch-worker-cuda
@@ -31,10 +32,10 @@ spec:
     - name: UNENCRYPTED_KEY
       value: "true"
     - name: CUDA_VISIBLE_DEVICES_NUM
-      value: "4"
+      value: "0"
     resources:
       limits:
-        nvidia.com/gpu: 4
+        nvidia.com/gpu: 0
     securityContext:
       capabilities:
         add:
@@ -43,6 +44,5 @@ spec:
           - "NET_ADMIN"
   imagePullSecrets:
   - name: regcred
-  runtimeClassName: nvidia
-  nodeName: worker1
+  #nodeName: worker1
   restartPolicy: Never
