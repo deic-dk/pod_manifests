@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-jammy
   labels:
     app: ubuntu-jammy
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-jammy
