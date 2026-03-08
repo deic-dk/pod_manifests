@@ -41,8 +41,6 @@ spec:
   - name: dshm
     emptyDir:
       medium: Memory
-  nodeSelector:
-    gpus-present: "true"
   #runtimeClassName: nvidia
   #nodeName: worker1
   
