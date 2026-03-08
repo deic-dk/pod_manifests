@@ -27,10 +27,6 @@ spec:
       value: ""
     - name: CUDA_VISIBLE_DEVICES_NUM
       value: "0"
-    resources:
-      limits:
-        nvidia.com/gpu: 0
-        memory: 1Gi
     securityContext:
       capabilities:
         add:
@@ -41,7 +37,5 @@ spec:
   - name: dshm
     emptyDir:
       medium: Memory
-  #runtimeClassName: nvidia
-  #nodeName: worker1
   
 
