@@ -1,4 +1,4 @@
-Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled PyTorch tools and libraries** (4 enabled GPUs).
+Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled PyTorch tools and libraries**.
 
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.
 
