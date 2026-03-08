@@ -42,7 +42,7 @@ spec:
     emptyDir:
       medium: Memory
   nodeSelector:
-    gpus-present: true
+    gpus-present: "true"
   #runtimeClassName: nvidia
   #nodeName: worker1
   
