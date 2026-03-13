@@ -10,7 +10,7 @@ spec:
     image: sciencedata/ubuntu_noble_lyrion_sciencedata
     volumeMounts:
       - name: sciencedata
-        mountPath: "/home/lyrion/music"
+        mountPath: "/var/lib/squeezeboxserver/music"
     ports:
     - containerPort: 9000
       protocol: TCP
