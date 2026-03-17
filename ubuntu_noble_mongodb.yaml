@@ -4,7 +4,7 @@ metadata:
   name: ubuntu-noble-mongodb
   labels:
     app: ubuntu-noble-mongodb
-  types: disk2tb-disk4tb
+    types: disk2tb-disk4tb
 spec:
   containers:
   - name: ubuntu-noble-mongodb
