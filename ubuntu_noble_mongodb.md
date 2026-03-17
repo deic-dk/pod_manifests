@@ -6,9 +6,7 @@ MongoDB runs on the default port 27017 - reverse proxied to a high external port
 
 Locally you can authenticate as 'admin' - with password 'secret' - which you should change.
 
-You can authenticate from the outside with your ScienceData X.509 key and certificate: **You must have generated these in your  [preferences](https://sciencedata.dk/sites/developer/ManagingFiles/index#toc_head3) before running this image.**
-
-Notice that `mongod` is running with the same key/certificate as `certificateKeyFile`.
+You can authenticate from the outside with your ScienceData X.509 key and certificate: **You must have generated these in your  [preferences](https://sciencedata.dk/sites/developer/ManagingFiles/index#toc_head3) before running this image.** Notice that `mongod` is running with the same key/certificate as `certificateKeyFile`.
 
 By providing a public SSH key, you can access your container via SSH.
 
