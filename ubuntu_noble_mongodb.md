@@ -24,6 +24,8 @@ mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/scienc
 
 Locally you can authenticate with MongoDB as 'admin' - with password 'secret'. _This password you should change._
 
+---
+
 By providing a public SSH key, you can access your container via SSH.
 
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
