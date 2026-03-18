@@ -22,7 +22,7 @@ mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/scienc
 
 \- where EXTRA_PORT is the external port 27017 has been mapped to.
 
-Locally you can authenticate with MongoDB as 'admin' - with password 'secret'. _This password you should change._
+Locally you can authenticate with MongoDB as 'admin' - with password 'secret'. **This password you should change.**
 
 ---
 
