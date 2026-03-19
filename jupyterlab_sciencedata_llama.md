@@ -1,5 +1,7 @@
 Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a CUDA-enabled Python kernel and common LLM/Llama tools installed**.
 
+**Before running this image, you must have ticked off `Allow internal HTTP access from your own pods` - in your [preferences](/index.php/settings/personal#panel-userapps).**
+
 _NOTICE: Until we procure modern GPUs, only Ollama works._
 _NOTICE: The Python version is 3.10._
 

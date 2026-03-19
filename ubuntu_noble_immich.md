@@ -1,5 +1,7 @@
 Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) - running the OpenSSH server and the **Immich** photo/video server.
 
+**Before running this image, you must have ticked off `Allow internal HTTP access from your own pods` - in your [preferences](/index.php/settings/personal#panel-userapps).**
+
 The directory `/var/lib/immich/media` is mounted from your ScienceData home server and used for photo and video storage. The path to the folder which is mounted is specified below. This path is relative to either your homedir, [`/files/`](/index.php/apps/files), or [`/storage/`](/storage/) on your ScienceData home server. In the former case, it is mounted read-only. Read more on `/storage/` [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
 If you choose to mount `/files/`, you're assumed to manage your content from ScienceData and upload functionality is disabled in Immich.

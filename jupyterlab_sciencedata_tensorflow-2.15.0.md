@@ -1,5 +1,7 @@
 Applying this manifest will start a **Jupyter Notebook server with the JupyterLab web UI with a Python kernel and CUDA-enabled TensorFlow-2.15 tools and libraries**.
 
+**Before running this image, you must have ticked off `Allow internal HTTP access from your own pods` - in your [preferences](/index.php/settings/personal#panel-userapps).**
+
 Use this image to run the <a href="https://www.tensorflow.org/tutorials">official</a> TensorFlow examples - made available <a href="https://sciencenotebooks.dk/urls/sciencedata.dk/public/e282734bb53e03090b22d6d0439960ef/?base_name=TensorFlow">here</a> for convenience.
 
 The "HTTPS URL" column will initally be populated with a URL without "token=". After a while, this URL will be updated to include a token and clicking it will allow you to access your server.

@@ -3,6 +3,8 @@ Applying this manifest will start a **Jupyter Notebook server with the JupyterLa
 _NOTICE: Until we procure modern GPUs, only Ollama works._
 _NOTICE: The Python version is 3.11._
 
+**Before running this image, you must have ticked off `Allow internal HTTP access from your own pods` - in your [preferences](/index.php/settings/personal#panel-userapps).**
+
 ---
 
 Common cache directories have been symlinked to a shared NFS partition. This is because of their sizes (too big for the local filesystem). Already cached models can thus be used w/o download waiting time.
