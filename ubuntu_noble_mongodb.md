@@ -10,12 +10,6 @@ You can connect from inside the pod with `mongosh`:
 
 ```
 sciencedata@ubuntu-noble-mongodb-fror-dtu-dk:~$ mongosh
-Current Mongosh Log ID:	69c402869c79a8ec62d805da
-Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.1
-Using MongoDB:		undefined
-Using Mongosh:		2.8.1
-
-For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
 
 test> db.runCommand({connectionStatus: 1})
 {
@@ -30,12 +24,6 @@ You should change the admin password. To do this, log in explicitly as 'admin' t
 
 ```
 sciencedata@ubuntu-noble-mongodb-fror-dtu-dk:~$ mongosh -u admin -p secret admin
-Current Mongosh Log ID:	69c40358dbf0533a93d805da
-Connecting to:		mongodb://<credentials>@127.0.0.1:27017/admin?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.8.1
-Using MongoDB:		8.2.5
-Using Mongosh:		2.8.1
-
-For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
 
 admin> db.changeUserPassword('admin', 'mynewverysecretpassword')
 
