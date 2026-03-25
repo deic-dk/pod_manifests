@@ -4,7 +4,7 @@ Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) - runnin
 
 If you choose "Instance type" **disk2tb** or **disk4tb**, the directory "/mnt", containing the MongoDB data files directory "/mnt/mongodb", is persistent across deletions and recreations of the pod. Notice that if you create several pods from this image, each will have it's own data directory - tied to the name of of the pod, i.e. the contents of "/mnt" will be different, but persistent, for each pod name. If you do not choose instance type, the database data is ephemeral, i.e. gone when the pod is gone.
 
-MongoDB runs on the default port 27017 - reverse proxied to a high external port number, which you can inspect in the fold-out panel in the pod listing. You can make this number persistent, once the pod has started.
+MongoDB runs on the default port 27017 - reverse-proxied to a high external port number, which you can inspect in the fold-out panel in the pod listing. You can make this number persistent, once the pod has started.
 
 You can connect from inside the pod with `mongosh`: 
 
