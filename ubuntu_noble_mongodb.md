@@ -6,7 +6,7 @@ If you choose "Instance type" **disk2tb** or **disk4tb**, the directory "/mnt", 
 
 MongoDB runs on the default port 27017 - reverse proxied to a high external port number, which you can inspect in the fold-out panel in the pod listing. You can make this number persistent, once the pod has started.
 
-You can connect from inside the pod with: 
+You can connect from inside the pod with `mongosh`: 
 
 ```
 sciencedata@ubuntu-noble-mongodb-fror-dtu-dk:~$ mongosh
@@ -37,15 +37,6 @@ Using Mongosh:		2.8.1
 
 For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
 
-------
-   The server generated these startup warnings when booting
-   2026-03-25T12:58:55.708+00:00: Server certificate has no compatible Subject Alternative Name. This may prevent TLS clients from connecting
-   2026-03-25T12:58:56.558+00:00: Soft rlimits for open file descriptors too low
-   2026-03-25T12:58:56.562+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-   2026-03-25T12:58:56.562+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
-   2026-03-25T12:58:56.562+00:00: We suggest setting the contents of sysfsFile to 0.
-------
-
 admin> db.changeUserPassword('admin', 'mynewverysecretpassword')
 
 ```
@@ -58,7 +49,7 @@ On your pod, this has already been done: Thus, on the pod, you can test X.509 au
 mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/sciencedata/mycertkey.pem --tlsCAFile /etc/ssl/ca_certs.pem --authenticationDatabase '$external' --authenticationMechanism MONGODB-X509
 ```
 
-and external connectivity with
+and external connectivity with:
 
 ```
 mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/sciencedata/mycertkey.pem --tlsCAFile /etc/ssl/ca_certs.pem --authenticationDatabase '$external' --authenticationMechanism MONGODB-X509 kube.sciencedata.dk:EXTRA_PORT
