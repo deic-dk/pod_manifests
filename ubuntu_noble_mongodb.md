@@ -6,10 +6,10 @@ If you choose "Instance type" **disk2tb** or **disk4tb**, the directory "/mnt", 
 
 MongoDB runs on the default port 27017 - reverse-proxied to a high external port number, which you can inspect in the fold-out panel in the pod listing. You can make this number persistent, once the pod has started.
 
-You can connect from inside the pod with `mongosh`: 
+You can connect to the database from inside the pod with `mongosh`: 
 
 ```
-sciencedata@ubuntu-noble-mongodb-fror-dtu-dk:~$ mongosh
+mongosh
 
 test> db.runCommand({connectionStatus: 1})
 {
@@ -23,13 +23,13 @@ test> db.runCommand({connectionStatus: 1})
 You should change the admin password. To do this, log in explicitly as 'admin' to the database 'admin':
 
 ```
-sciencedata@ubuntu-noble-mongodb-fror-dtu-dk:~$ mongosh -u admin -p secret admin
+mongosh -u admin -p secret admin
 
 admin> db.changeUserPassword('admin', 'mynewverysecretpassword')
 
 ```
 
-You can connect to MongoDB from the outside  with your ScienceData certificate and key plus the ScienceData CA certificate - all of which you can download in your [preferences](/index.php/settings/personal#panel-userapps).
+You can connect to the database from the outside  with your ScienceData certificate and key plus the ScienceData CA certificate - all of which you can download in your [preferences](/index.php/settings/personal#panel-userapps).
 
 On your pod, this has already been done: Thus, on the pod, you can test X.509 authentication with:
 
@@ -44,6 +44,16 @@ mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/scienc
 ```
 
 where EXTRA_PORT is the external port 27017 has been mapped to.
+
+Yout can add more users:
+
+```
+
+ssl_subject=`openssl x509 -nameopt rfc2253 -in some_cert.pem -noout -subject | sed -E 's|^subject=||' | sed -E 's| +||g'`
+mongosh -u admin -p mynewverysecretpassword admin --eval "db.getSiblingDB(\"\$external\").runCommand({createUser: '$ssl_subject', roles: [{role: 'userAdminAnyDatabase', db: 'admin'}]})"
+```
+
+where 'some_cert.pem' is the ScienceData certificate of a user to be added.
 
 The data directory "/mnt/mongodb" is backed up nightly to "mongodb.tar.gz" in your ScienceData homedir.
 
