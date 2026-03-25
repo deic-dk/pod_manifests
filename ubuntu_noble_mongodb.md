@@ -48,7 +48,6 @@ where EXTRA_PORT is the external port 27017 has been mapped to.
 Yout can add more users:
 
 ```
-
 ssl_subject=`openssl x509 -nameopt rfc2253 -in some_cert.pem -noout -subject | sed -E 's|^subject=||' | sed -E 's| +||g'`
 mongosh -u admin -p mynewverysecretpassword admin --eval "db.getSiblingDB(\"\$external\").runCommand({createUser: '$ssl_subject', roles: [{role: 'userAdminAnyDatabase', db: 'admin'}]})"
 ```
