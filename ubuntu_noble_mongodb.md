@@ -43,7 +43,7 @@ and external connectivity with:
 mongosh --tls --tlsAllowInvalidCertificates --tlsCertificateKeyFile /home/sciencedata/mycertkey.pem --tlsCAFile /etc/ssl/ca_certs.pem --authenticationDatabase '$external' --authenticationMechanism MONGODB-X509 kube.sciencedata.dk:EXTRA_PORT
 ```
 
-\- where EXTRA_PORT is the external port 27017 has been mapped to.
+where EXTRA_PORT is the external port 27017 has been mapped to.
 
 The data directory "/mnt/mongodb" is backed up nightly to "mongodb.tar.gz" in your ScienceData homedir.
 
