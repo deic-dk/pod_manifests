@@ -4,7 +4,6 @@ metadata:
   name: ubuntu-noble-versitygw
   labels:
     app: ubuntu-noble-versitygw
-    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-noble-versitygw
