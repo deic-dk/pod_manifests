@@ -19,6 +19,8 @@ spec:
     env:
     - name: POD_HTTP_PORT
       value: "7070"
+    - name: USERNAME
+      value: "s3"
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: HOME_SERVER
