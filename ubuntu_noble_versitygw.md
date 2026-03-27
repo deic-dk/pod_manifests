@@ -4,6 +4,8 @@ Versity S3 Gateway is configured to serve data off the directory `/mnt/vgw/`. Th
 
 The directory `/mnt/vgw/` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/`](/storage/) on your ScienceData home server. Read more on `/storage/` [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
+Since NFS does not support extended attributes, metadata is kept in a "sidecar" in "/tmp/versitygw".
+
 You can configure the S3 service by editing the config file "/mnt/vgw/versitygw.conf", following the [documentation](https://github.com/versity/versitygw/wiki).
 
 Users are identified by their access key ID and authenticate with this and their secret access key. You can read off the secret access key of the admin user, in the config file.
@@ -15,6 +17,8 @@ versitygw admin -a admin -s ADMIN_SECRET_ACCESS_KEY -er http://127.0.0.1:7070 cr
 ```
 
 where `ADMIN_SECRET_ACCESS_KEY` is the secret access key of the admin user, `USER_ACCESS_KEY_ID` is the access key ID of the new user (any string) `USER_SECRET_ACCESS_KEY` is the secret access key of the new user (any string).
+
+When deleting a pod, your metadata directory, "/tmp/versitygw", will be copied to `versitygw.tar.gz` in your ScienceData home folder. When firing up the image again, this archive, if present, will be copied over and used.
 
 By providing a public SSH key you can access your container via SSH.
 
