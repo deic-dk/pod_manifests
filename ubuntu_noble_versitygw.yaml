@@ -16,9 +16,9 @@ spec:
       protocol: TCP
     - containerPort: 22
       protocol: TCP
+    env:
     - name: POD_HTTP_PORT
       value: "7070"
-    env:
     - name: SSH_PUBLIC_KEY
       value: ""
     - name: HOME_SERVER
