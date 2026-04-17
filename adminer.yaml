@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: adminer
+  labels:
+    app: adminer
+    types: small
+spec:
+  containers:
+  - name: adminer
+    image: adminer:4
+    ports:
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: POSTGRES_DB
+      value: "zenodo"
+    - name: POSTGRES_USER
+      value: "zenodo"
+    - name: POSTGRES_PASSWORD
+      value: "zenodo"
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  securityContext:
+    sysctls:
+    - name: "net.ipv4.ping_group_range"
+      value: "0 2147483647"
+  restartPolicy: Never
