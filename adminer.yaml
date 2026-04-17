@@ -10,9 +10,13 @@ spec:
   - name: adminer
     image: adminer:4
     ports:
+    - containerPort: 8080
+      protocol: TCP
     - containerPort: 22
       protocol: TCP
     env:
+    - name: POD_HTTP_PORT
+      value: "8080"
     - name: POSTGRES_DB
       value: "zenodo"
     - name: POSTGRES_USER
