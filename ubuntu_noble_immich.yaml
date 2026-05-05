@@ -32,6 +32,8 @@ spec:
       value: ""
     - name: POD_HTTP_PORT
       value: "2283"
+    - name: NFS_VOLUME_PATH
+      value: ""
     securityContext:
       capabilities:
         add:
