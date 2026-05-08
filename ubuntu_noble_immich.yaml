@@ -11,7 +11,7 @@ spec:
     image: sciencedata/ubuntu_noble_immich_sciencedata
     volumeMounts:
       - name: sciencedata
-        mountPath: "/var/lib/immich/upload"
+        mountPath: "/var/lib/immich/home/media"
     ports:
     - containerPort: 2283
       protocol: TCP
