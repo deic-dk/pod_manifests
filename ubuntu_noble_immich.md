@@ -6,8 +6,6 @@ The directory `/var/lib/immich/home/media` is mounted from your ScienceData home
 
 If you choose to mount `/files/`, you're assumed to manage your content from ScienceData and upload functionality is disabled in Immich.
 
-After firing up this image the first time, you should visit the `view` URL listed below, create an administrator account and create an external library with a path under `/var/lib/immich/home/media`, i.e. serve content from the directory mounted from ScienceData.
-
 When deleting a pod, a dump of your database is copied to `immich_data.sql` in your ScienceData home folder. When firing up the image again, this file, if present, is copied over and loaded - and thus your configuration, including user accounts, will be persistent across restarts. If you're mounting from `/files/`, after a restart you'll have to regenerate thumbnails by clicking
 
     Administration -> Jobs -> GENERATE THUMBNAILS -> ALL
