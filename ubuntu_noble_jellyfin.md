@@ -8,7 +8,7 @@ The directory `/home/jellyfin/media` is mounted from your ScienceData home serve
 
 To keep media across pod deletion/creation, configure jellyfin to use `/home/jellyfin/media` for media storage.
 
-When deleting a pod, your configuration directory will be copied to `jellyfin_data.tar.gz` in your ScienceData home folder. When firing up the image again, this archive, if present, will be copied over and used - and thus your configuration, including user accounts, will be persistent across restarts.
+When deleting a pod, your configuration directory will be copied to `jellyfin_data-foldername.tar.gz` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used - and thus your configuration, including user accounts, will be persistent across restarts.
 
 By providing a public SSH key you can access your container via SSH.
 
