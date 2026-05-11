@@ -8,7 +8,7 @@ The directory `/var/lib/squeezeboxserver/music` is mounted from your ScienceData
 
 To keep music across pod deletion/creation, choose the location of your music folder under `/var/lib/squeezeboxserver/music`.
 
-When deleting a pod, your `cache` and `prefs` directories will be copied to `lyrion_config.tar.gz` in your ScienceData home folder. When firing up the image again, this archive, if present, will be copied over and used - and thus you'll continue where you left.
+When deleting a pod, your `cache` and `prefs` directories will be copied to `lyrion_config-foldername.tar.gz` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used - and thus you'll continue where you left.
 
 To allow connecting clients (music players), the pod serves data via HTTP on port 9000 (web frontend and audio streams) and 3483 (API). These ports are reverse proxied on the external ports listed in the field "external ports". If you're the only one running this image and noone else has reserved the ports, your external ports will also be 9000 (TCP) and 3483 (UDP and TCP) - making it straight forward to connect clients. If not, you will have to [set up port forwarding](https://forums.lyrion.org/forum/user-forums/logitech-media-server/105388-problems-getting-squeezeplay-to-work-remotely-over-ssh) at your end, as clients typically use hard-coded port numbers 9000 and 3483.
 
