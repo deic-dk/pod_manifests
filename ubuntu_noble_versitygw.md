@@ -18,7 +18,7 @@ versitygw admin -a admin -s ADMIN_SECRET_ACCESS_KEY -er http://127.0.0.1:7070 cr
 
 where `ADMIN_SECRET_ACCESS_KEY` is the secret access key of the admin user, `USER_ACCESS_KEY_ID` is the access key ID of the new user (any string) `USER_SECRET_ACCESS_KEY` is the secret access key of the new user (any string).
 
-When deleting a pod, your metadata directory, "/tmp/versitygw", will be archived to "versitygw.tar.gz" in your ScienceData home folder. When firing up the image again, this archive, if present, will be copied over and used.
+When deleting a pod, your metadata directory, "/tmp/versitygw", will be archived to "versitygw-foldername.tar.gz" in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used.
 
 By providing a public SSH key, you can access your container via SSH.
 
