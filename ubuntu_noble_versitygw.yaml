@@ -20,8 +20,6 @@ spec:
       protocol: TCP
     env:
     - name: POD_HTTP_PORT
-      value: "8080"
-    - name: POD_EXTRA_PORTS
       value: "7070"
     - name: USERNAME
       value: "s3"
