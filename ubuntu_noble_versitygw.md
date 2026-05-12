@@ -44,7 +44,7 @@ aws --endpoint-url http://127.0.0.1:7070 s3api put-object --bucket mytest-bucket
 
 From the outside, replace `127.0.0.1:7070` with `kube.sciencedata.dk:port_number`, where `port_number` can be read off the container list below.
 
-You can also use S3 GUI clients, like [Cyberduck](https://cyberduck.io). For Cyberduck to work with Versitygw, you have to enable and use the profile ("Preferences"/"Settings"->"Profiles") "S3 (Deprecated path style requests)".
+You can also use S3 GUI clients, like [Cyberduck](https://cyberduck.io). For Cyberduck to work with Versitygw, you have to enable and use the profile "Preferences"/"Settings"->"Profiles" -> "S3 (Deprecated path style requests)".
 
 When deleting a pod, your metadata directory, "/tmp/versitygw", will be archived to "versitygw-foldername.tar.gz" in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used.
 
