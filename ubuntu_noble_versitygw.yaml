@@ -14,10 +14,14 @@ spec:
     ports:
     - containerPort: 7070
       protocol: TCP
+    - containerPort: 8080
+      protocol: TCP
     - containerPort: 22
       protocol: TCP
     env:
     - name: POD_HTTP_PORT
+      value: "8080"
+    - name: POD_EXTRA_PORTS
       value: "7070"
     - name: USERNAME
       value: "s3"
