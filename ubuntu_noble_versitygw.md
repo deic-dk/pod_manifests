@@ -39,7 +39,7 @@ aws --endpoint-url http://127.0.0.1:7070 s3api list-buckets
 Upload a file with:
 
 ```
-aws --endpoint-url http://127.0.0.1:7070 s3api put-object --bucket mytest-bucket --key some_file --body some_file
+aws --endpoint-url http://127.0.0.1:7070 s3api put-object --bucket mybucket --key some_file --body some_file
 ```
 
 From the outside, replace `127.0.0.1:7070` with `kube.sciencedata.dk:port_number`, where `port_number` can be read off the container list below.
