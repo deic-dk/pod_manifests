@@ -8,15 +8,43 @@ Since NFS does not support extended attributes, metadata is kept in a "sidecar" 
 
 You can configure the S3 service by editing the config file "/mnt/vgw/versitygw.conf", following the [documentation](https://github.com/versity/versitygw/wiki).
 
-Users are identified by their access key ID and authenticate with this and their secret access key. You can read off the secret access key of the admin user, in the config file.
-
-You can add additional users with:
+Users are identified by their access key ID and authenticate with this and their secret access key. You can read off the secret access key of the admin user, in the config file. To use it, set environment variables:
 
 ```
-versitygw admin -a admin -s ADMIN_SECRET_ACCESS_KEY -er http://127.0.0.1:7070 create-user -r user -a USER_ACCESS_KEY_ID -s USER_SECRET_ACCESS_KEY
+source /mnt/vgw/versitygw.conf
 ```
 
-where `ADMIN_SECRET_ACCESS_KEY` is the secret access key of the admin user, `USER_ACCESS_KEY_ID` is the access key ID of the new user (any string) `USER_SECRET_ACCESS_KEY` is the secret access key of the new user (any string).
+You can add then additional users with:
+
+```
+versitygw admin -er http://127.0.0.1:7070 create-user -r user -a USER_ACCESS_KEY_ID -s USER_SECRET_ACCESS_KEY
+```
+
+where `USER_ACCESS_KEY_ID` is the access key ID of the new user (any string) `USER_SECRET_ACCESS_KEY` is the secret access key of the new user (any string).
+
+To access the service, you can also use the [AWS command line tools](https://awscli.amazonaws.com/) - preinstalled on the pod.
+
+Create a bucket with:
+
+```
+aws s3api --endpoint-url http://127.0.0.1:7070 create-bucket --bucket mybucket
+```
+
+List buckets with:
+
+```
+aws --endpoint-url http://127.0.0.1:7070 s3api list-buckets
+```
+
+Upload a file with:
+
+```
+aws --endpoint-url http://127.0.0.1:7070 s3api put-object --bucket mytest-bucket --key some_file --body some_file
+```
+
+From the outside, replace `127.0.0.1:7070` with `kube.sciencedata.dk:port_number`, where `port_number` can be read off the container list below.
+
+You can also use S3 GUI clients, like [Cyberduck](https://cyberduck.io). For Cyberduck to work with Versitygw, you have to enable and use the profile ("Preferences"/"Settings"->"Profiles") "S3 (Deprecated path style requests)".
 
 When deleting a pod, your metadata directory, "/tmp/versitygw", will be archived to "versitygw-foldername.tar.gz" in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used.
 
