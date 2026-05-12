@@ -46,10 +46,14 @@ From the outside, replace `127.0.0.1:7070` with `kube.sciencedata.dk:port_number
 
 You can also use S3 GUI clients, like [Cyberduck](https://cyberduck.io). For Cyberduck to work with Versitygw, you have to enable and use the profile "Preferences"/"Settings"->"Profiles" -> "S3 (Deprecated path style requests)".
 
-There's a web UI running on port 8080 - not reverse-proxied, so to access it, use an SSH tunnel.
-
 When deleting a pod, your metadata directory, "/tmp/versitygw", will be archived to "versitygw-foldername.tar.gz" in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used.
 
-By providing a public SSH key, you can access your container via SSH.
+By providing a public SSH key, you can access your container via SSH. You can also create an SSH tunnel to access the web UI running on port 8080:
+
+```
+ssh -4 -L 8080:localhost:8080 -p ssh_port s3@kube.sciencedata.dk
+```
+
+After that, point your browser to http://localhost:8080/, click on "Advanced Options" and change the endpoints to `https://kube.sciencedata.dk:port_number`.
 
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
