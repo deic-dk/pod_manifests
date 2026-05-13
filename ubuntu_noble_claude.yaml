@@ -25,6 +25,8 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
+    - name: NFS_RW
+      value: "yes"
     securityContext:
       capabilities:
         add:
