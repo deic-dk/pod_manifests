@@ -4,6 +4,7 @@ metadata:
   name: ubuntu-noble-claude
   labels:
     app: ubuntu-noble-claude
+    types: small-medium-large
 spec:
   containers:
   - name: ubuntu-noble-claude
