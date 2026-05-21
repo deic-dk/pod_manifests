@@ -6,7 +6,7 @@ The directory `/home/claude/code` is mounted from your ScienceData home server. 
 
 To keep the code you work on across pod deletion/creation, run `claude` in `/home/claude/code`.
 
-When deleting a pod, your Claude session files "/home/claude/.claude*" will be copied to `claude-foldername.tar.gz` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and you can continue  working where you stopped.
+When deleting a pod, your Claude session files "/home/claude/.claude*" will be copied to `claude-foldername.tar.gz` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. This is also done by an hourly cronjob. When firing up the image again, this archive, if present, will be copied over and you can continue  working where you stopped with `claude continue`.
 
 By providing a public SSH key you can access your container via SSH.
 
