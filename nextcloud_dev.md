@@ -16,5 +16,7 @@ NOTICE: The above implies that on a first launch, you'll need patience, as insta
 
 By providing a public SSH key you can access your pod via SSH.
 
+If you provide a setup script, setting the environment variables MAIL_SMTPHOST, MAIL_SMTPNAME, MAIL_SMTPPASSWORD, Nextcloud will be able to send out mail notifications.
+
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
 
