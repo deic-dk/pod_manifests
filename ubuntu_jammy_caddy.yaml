@@ -4,6 +4,9 @@ metadata:
   name: ubuntu-jammy-caddy
   labels:
     app: ubuntu-jammy-caddy
+    domain: dtu.dk
+    user: fror
+    group: admin_pods
 spec:
   containers:
   - name: ubuntu-jammy-caddy
