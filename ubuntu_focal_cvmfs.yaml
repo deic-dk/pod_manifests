@@ -6,7 +6,7 @@ metadata:
     types: small-medium-large
   annotations:
     catalog/title: "CVMFS"
-    catalog/category: "High Energy Physics"
+    catalog/category: "Linux"
     catalog/summary: "Ubuntu 20.04 with CVMFS"
     catalog/featured: "0"
 spec:

@@ -10,6 +10,8 @@ Providing a public SSH key allows you to access your pod via SSH.
 The pod comes with a minimal amount of software installed - plus what's necessary
 to run the (CERN centric) software packages of the default setup script.
 
+These software packages are mainly for processing and analyzing LHC data.
+
 The idea is to use software from "/cvmfs/*" to process data that can be conveniently
 kept on ScienceData and accessed via unauthenticated HTTPS at https&colon;//sciencedata/files/.
 

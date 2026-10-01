@@ -8,7 +8,7 @@ metadata:
     catalog/title: "S3 gateway to your ScienceData files"
     catalog/category: "Storage services"
     catalog/summary: "S3 object store, serving your your ScienceData files."
-    catalog/featured: "1"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble-versitygw
