@@ -6,7 +6,7 @@ metadata:
     app: ubuntu-noble-postgresql
     types: disk2tb-disk4tb
   annotations:
-    catalog/title: "PostgreSQL server"
+    catalog/title: "PostgreSQL"
     catalog/category: "Databases"
     catalog/summary: "PostgreSQL server, running off ephemeral local storage, backed up to your ScienceData homedir"
     catalog/featured: "0"
