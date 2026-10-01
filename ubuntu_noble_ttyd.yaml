@@ -1,23 +1,23 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ubuntu-noble-mongodb
+  name: ubuntu-noble-ttyd
   labels:
-    app: ubuntu-noble-mongodb
-    types: disk2tb-disk4tb
+    app: ubuntu-noble-ttyd
+    types: small-medium-large
   annotations:
-    catalog/title: "MongoDB"
-    catalog/category: "Databases"
-    catalog/summary: "MongoDB with external access via X.509 authentication"
-    catalog/featured: "0"
+    catalog/title: "Ubuntu 24.04 with browser terminal"
+    catalog/category: "Linux"
+    catalog/summary: "A shell in the browser, next to your files"
+    catalog/featured: "1"
 spec:
   containers:
-  - name: ubuntu-noble-mongodb
-    image: sciencedata/ubuntu_noble_mongodb_sciencedata
+  - name: ubuntu-noble-ttyd
+    image: sciencedata/ubuntu_noble_ttyd
     ports:
     - containerPort: 22
       protocol: TCP
-    - containerPort: 27017
+    - containerPort: 7681
       protocol: TCP
     env:
     - name: SSH_PUBLIC_KEY
@@ -30,8 +30,10 @@ spec:
       value: ""
     - name: PUBLIC_HOME_SERVER
       value: ""
-    - name: POD_EXTRA_PORTS
-      value: "27017"
+    - name: NFS_RW
+      value: "yes"
+    - name: POD_HTTP_PORT
+      value: "7681"
     securityContext:
       capabilities:
         add:

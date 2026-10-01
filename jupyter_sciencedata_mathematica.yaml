@@ -4,6 +4,11 @@ metadata:
   name: jupyter-mathematica
   labels:
     types: small-medium-large
+  annotations:
+    catalog/title: "Mathematica"
+    catalog/category: "Scientific computing"
+    catalog/summary: "Jupyter Notebook server with Wolfram/Mathematica kernel"
+    catalog/featured: "0"
 spec:
   containers:
   - name: jupyter-mathematica

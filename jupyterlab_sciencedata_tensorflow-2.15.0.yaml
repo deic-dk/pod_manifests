@@ -2,6 +2,13 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: jupyter-tensorflow
+  labels:
+    types: small-medium-large
+  annotations:
+    catalog/title: "TensorFlow-2.15"
+    catalog/category: "Machine learning"
+    catalog/summary: "Jupyter Notebook server plus TensorFlow-2.15"
+    catalog/featured: "0"
 spec:
   containers:
   - name: jupyter-tensorflow

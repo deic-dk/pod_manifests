@@ -5,6 +5,11 @@ metadata:
   labels:
     app: batch
     types: small-medium-large
+  annotations:
+    catalog/title: "Batch server"
+    catalog/category: "Batch computing"
+    catalog/summary: "Batch server for the ScienceData batch system"
+    catalog/featured: "0"
 spec:
   containers:
   - name: batch-server

@@ -5,6 +5,11 @@ metadata:
   labels:
     app: batch
     types: small-medium-large-gpu1-gpu4
+  annotations:
+    catalog/title: "CUDA Whisper"
+    catalog/category: "Batch computing"
+    catalog/summary: "Worker node for the ScienceData batch system - with CUDA and Whisper preinstalled"
+    catalog/featured: "0"
 spec:
   containers:
   - name: batch-worker-cuda-whisper

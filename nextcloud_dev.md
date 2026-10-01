@@ -2,8 +2,6 @@ Applying this manifest will start **A pod running Nextcloud on top of Caddy, on 
 
 This pod is for development only. A first deployment can take several minutes.
 
-For a quicker deployment, use the image `nextcloud`.
-
 Nextcloud is installed in `/var/www/nextcloud`. Data is kept in `/var/www/data`.
 
 The directory `/var/www/` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/` on your ScienceData home server](/storage/). Read more on the storage service [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).

@@ -5,6 +5,11 @@ metadata:
   labels:
     app: ubuntu-noble
     types: small-medium-large
+  annotations:
+    catalog/title: "Ubuntu 24.04"
+    catalog/category: "Linux"
+    catalog/summary: "Minimal Ubuntu-24.04 - Noble Numbat, next to your files"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble

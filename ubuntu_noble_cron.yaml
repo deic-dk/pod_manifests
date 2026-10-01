@@ -4,6 +4,11 @@ metadata:
   name: ubuntu-noble-cron
   labels:
     app: ubuntu-noble-cron
+  annotations:
+    catalog/title: "cronjobs for ScienceData"
+    catalog/category: "Linux"
+    catalog/summary: "Ubuntu 24.04 with your storage mounted from ScienceData and a cron daemon running jobs off that storage"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble-cron

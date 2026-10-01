@@ -4,6 +4,11 @@ metadata:
   name: jupyter-pytorch
   labels:
     types: small-medium-large-gpu1-gpu4
+  annotations:
+    catalog/title: "PyTorch"
+    catalog/category: "Machine learning"
+    catalog/summary: "Jupyter Notebook server plus Pytorch"
+    catalog/featured: "0"
 spec:
   containers:
   - name: jupyter-pytorch

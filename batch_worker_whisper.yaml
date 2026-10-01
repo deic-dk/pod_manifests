@@ -5,6 +5,11 @@ metadata:
   labels:
     app: batch
     types: small-medium-large
+  annotations:
+    catalog/title: "Whisper"
+    catalog/category: "Batch computing"
+    catalog/summary: "Worker node for the ScienceData batch system - with Whisper preinstalled"
+    catalog/featured: "0"
 spec:
   containers:
   - name: batch-worker-whisper

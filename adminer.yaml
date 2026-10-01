@@ -5,6 +5,11 @@ metadata:
   labels:
     app: adminer
     types: small
+  annotations:
+    catalog/title: "Adminer"
+    catalog/category: "Databases"
+    catalog/summary: "Web UI for managing PostgreSQL"
+    catalog/featured: "0"
 spec:
   containers:
   - name: adminer

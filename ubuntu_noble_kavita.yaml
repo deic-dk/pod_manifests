@@ -4,6 +4,11 @@ metadata:
   name: ubuntu-noble-kavita
   labels:
     app: ubuntu-noble-kavita
+  annotations:
+    catalog/title: "Kavita e-book server"
+    catalog/category: "Media servers"
+    catalog/summary: "The Kavita digital library server - serving e-books off your ScienceData storage"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble-kavita

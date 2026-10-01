@@ -5,6 +5,11 @@ metadata:
   labels:
     app: ubuntu-noble-caddy
     types: small-medium-large
+  annotations:
+    catalog/title: "Caddy"
+    catalog/category: "Web servers"
+    catalog/summary: "Ubuntu 24.04 with Caddy serving web pages off mounted ScienceData storage"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble-caddy

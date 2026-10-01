@@ -1,7 +1,5 @@
 Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) - with the Anthropic Claude command-line tool preinstalled and running the OpenSSH server.
 
-**Before running this image, you must have ticked off `Allow internal HTTP access from your own pods` - in your [preferences](/index.php/settings/personal#panel-userapps).**
-
 The directory `/home/claude/code` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/`](/storage/) on your ScienceData home server. 
 
 To keep the code you work on across pod deletion/creation, run `claude` in `/home/claude/code`.

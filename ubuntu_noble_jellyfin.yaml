@@ -5,6 +5,11 @@ metadata:
   labels:
     app: ubuntu-noble-jellyfin
     types: small-medium-large
+  annotations:
+    catalog/title: "Jellyfin media server"
+    catalog/category: "Media servers"
+    catalog/summary: "The Jellyfin media server - serving movies, music and e-books off your ScienceData storage"
+    catalog/featured: "0"
 spec:
   containers:
   - name: ubuntu-noble-jellyfin
