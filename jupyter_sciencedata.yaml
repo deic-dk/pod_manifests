@@ -9,6 +9,7 @@ metadata:
     catalog/category: "Jupyter Notebooks"
     catalog/summary: "Jupyter Notebook server"
     catalog/featured: "0"
+    catalog/wait-for-token: "1"
 spec:
   containers:
   - name: jupyter

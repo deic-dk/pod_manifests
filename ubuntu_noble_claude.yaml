@@ -10,6 +10,7 @@ metadata:
     catalog/category: "Developer tools"
     catalog/summary: "Ubuntu 24.04 with claude in a browser terminal"
     catalog/featured: "0"
+    catalog/wait-for-token: "1"
 spec:
   containers:
   - name: ubuntu-noble-claude

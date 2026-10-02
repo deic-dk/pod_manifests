@@ -9,6 +9,7 @@ metadata:
     catalog/category: "Scientific computing"
     catalog/summary: "Jupyter Notebook server with GenePattern computational biology tools preinstalled"
     catalog/featured: "0"
+    catalog/wait-for-token: "1"
 spec:
   containers:
   - name: genepattern

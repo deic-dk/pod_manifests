@@ -10,6 +10,7 @@ metadata:
     catalog/category: "Linux"
     catalog/summary: "A shell in the browser, next to your files"
     catalog/featured: "1"
+    catalog/wait-for-token: "1"
 spec:
   containers:
   - name: ubuntu-noble-ttyd

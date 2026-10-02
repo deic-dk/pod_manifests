@@ -9,6 +9,7 @@ metadata:
     catalog/category: "Machine learning"
     catalog/summary: "Jupyter Notebook server plus Pytorch"
     catalog/featured: "0"
+    catalog/wait-for-token: "1"
 spec:
   containers:
   - name: jupyter-pytorch
