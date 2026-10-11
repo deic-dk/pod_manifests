@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: jupyter-tensorflow
   labels:
-    types: small-medium-large
+    types: small-medium-large-gpu1-gpu4
   annotations:
     catalog/title: "TensorFlow-2.15"
     catalog/category: "Machine learning"
@@ -29,10 +29,7 @@ spec:
     - name: FILE
       value: ""
     - name: CUDA_VISIBLE_DEVICES_NUM
-      value: "2"
-    resources:
-      limits:
-        nvidia.com/gpu: 2
+      value: "0"
     securityContext:
       capabilities:
         add:
