@@ -38,8 +38,8 @@ spec:
       value: ""
     - name: NFS_RW
       value: "yes"
-    - name: SETUP_SCRIPT
-      value: "/var/www/setup.sh"
+#    - name: SETUP_SCRIPT
+#      value: "/var/www/setup.sh"
     securityContext:
       capabilities:
         add:
