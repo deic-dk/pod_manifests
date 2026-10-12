@@ -11,6 +11,8 @@ metadata:
     catalog/summary: "PostgreSQL server, running off ephemeral local storage, backed up to your ScienceData homedir"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-postgresql
     image: sciencedata/ubuntu_noble_postgresql_sciencedata

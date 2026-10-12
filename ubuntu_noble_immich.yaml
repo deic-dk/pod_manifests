@@ -11,6 +11,8 @@ metadata:
     catalog/summary: "The Immich photo/video server - serving photos and movies off your ScienceData storage"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-immich
     image: sciencedata/ubuntu_noble_immich_sciencedata

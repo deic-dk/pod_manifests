@@ -10,6 +10,8 @@ metadata:
     catalog/summary: "The Lyrion (formerly Squeezeboxserver) music server"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-lyrion
     image: sciencedata/ubuntu_noble_lyrion_sciencedata

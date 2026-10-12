@@ -10,6 +10,8 @@ metadata:
     catalog/summary: "S3 gateway to your ScienceData files"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-versitygw
     image: sciencedata/ubuntu_noble_versitygw_sciencedata

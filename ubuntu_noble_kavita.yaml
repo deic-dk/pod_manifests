@@ -10,6 +10,8 @@ metadata:
     catalog/summary: "The Kavita digital library server - serving e-books off your ScienceData storage"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-kavita
     image: sciencedata/ubuntu_noble_kavita_sciencedata

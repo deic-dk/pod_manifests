@@ -11,6 +11,8 @@ metadata:
     catalog/summary: "MongoDB with external access via X.509 authentication"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-mongodb
     image: sciencedata/ubuntu_noble_mongodb_sciencedata

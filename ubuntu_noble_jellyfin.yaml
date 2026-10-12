@@ -11,6 +11,8 @@ metadata:
     catalog/summary: "The Jellyfin media server - serving movies, music and e-books off your ScienceData storage"
     catalog/featured: "0"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-jellyfin
     image: sciencedata/ubuntu_noble_jellyfin_sciencedata

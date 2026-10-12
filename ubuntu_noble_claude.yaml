@@ -12,6 +12,8 @@ metadata:
     catalog/featured: "0"
     catalog/wait-for-token: "1"
 spec:
+  # time for start.sh to save the pod state at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
   containers:
   - name: ubuntu-noble-claude
     image: sciencedata/ubuntu_noble_claude_sciencedata
