@@ -4,6 +4,9 @@ metadata:
   name: nextcloud-dev
   labels:
     app: nextcloud-dev
+    # test silos of the cluster: only this user may start one (run_pod checks user+domain)
+    user: fror
+    domain: dtu.dk
   annotations:
     catalog/title: "Nextcloud"
     catalog/category: "Storage services"
