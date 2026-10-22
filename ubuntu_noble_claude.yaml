@@ -14,6 +14,10 @@ metadata:
 spec:
   # time for start.sh to save the pod state at shutdown (default 30 s is too short)
   terminationGracePeriodSeconds: 600
+  # Claude Code ships a native x64 binary that needs AVX ("Illegal instruction"
+  # on the cluster's AVX-less Opterons). Nodes with AVX carry avx-present=yes.
+  nodeSelector:
+    avx-present: "yes"
   containers:
   - name: ubuntu-noble-claude
     image: sciencedata/ubuntu_noble_claude_sciencedata
