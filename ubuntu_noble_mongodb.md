@@ -52,7 +52,7 @@ mongosh -u admin -p mynewverysecretpassword admin --eval "db.getSiblingDB(\"\$ex
 
 where 'some_cert.pem' is the ScienceData certificate of a user to be added.
 
-The data directory "/mnt/mongodb" is backed up nightly to "mongodb.tar.gz" in your ScienceData homedir.
+With a disk instance type, each database is dumped nightly to "mongodb-dump-dbname.archive.gz" (mongodump, gzipped) in the folder `Containers` in your ScienceData homedir. When a pod starts with an empty disk, the newest dumps are restored.
 
 ---
 

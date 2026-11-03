@@ -8,7 +8,7 @@ The directory `/var/www/` is mounted from your ScienceData home server. The path
 
 If the folder you mount has a subdirectory `nextcloud`, it will be used unchanged. Otherwise, a subdirectory `nextcloud` will be created and populated with a recent minimal Nextcloud, checked out from GitHub. The initial password for 'admin' is 'secret'. It should obviously be changed immediately.
 
-The SQLite database, "/var/www/data/owncloud.db", with file information etc. is in fact a soft-link to the local file `/tmp/owncloud.db` (for performance), which is backed up to `owncloud.db-dev-foldername.gz` (where `foldername` is the name of the directory mounted from ScienceData) in the root of your ScienceData homedir, when the pod is deleted. When a new pod is created, if this file exists, it is fetched, unpacked and used.
+The SQLite database, "/var/www/data/owncloud.db", with file information etc. is in fact a soft-link to the local file `/tmp/owncloud.db` (for performance), which is backed up to `owncloud.db-dev-foldername.gz` (where `foldername` is the name of the directory mounted from ScienceData) in the folder `Containers` in your ScienceData homedir, when the pod is deleted and every night. When a new pod is created, if this file exists, it is fetched, unpacked and used.
 
 NOTICE: The above implies that on a first launch, you'll need patience, as installing Nextcloud on an NFS volume can take a few minutes. Also, it is not advised to run more than one pod off the same directory with this image.
 
