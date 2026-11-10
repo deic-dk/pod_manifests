@@ -11,6 +11,11 @@ metadata:
     catalog/featured: "0"
     catalog/wait-for-token: "1"
 spec:
+  # The scientific Python stack in this image (numpy, scipy, ...) needs AVX and dies
+  # with "Illegal instruction" on the cluster's AVX-less Opterons. Nodes with AVX
+  # carry avx-present=yes (mfslinux install_kubernetes).
+  nodeSelector:
+    avx-present: "yes"
   containers:
   - name: jupyter-tensorflow
     image: sciencedata/jupyter_sciencedata_tensorflow:2.15
