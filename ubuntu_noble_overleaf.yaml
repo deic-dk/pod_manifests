@@ -8,6 +8,11 @@ metadata:
     # trial: only this user may start one (run_pod checks user+domain)
     user: fror
     domain: dtu.dk
+  annotations:
+    catalog/title: "Overleaf"
+    catalog/category: "Teaching and collaboration"
+    catalog/summary: "Collaborative LaTeX editing - your own Overleaf for you and the people you work with"
+    catalog/featured: "0"
 spec:
   # time to flush open documents and upload the backup at shutdown
   terminationGracePeriodSeconds: 900

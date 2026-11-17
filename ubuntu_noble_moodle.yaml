@@ -7,6 +7,11 @@ metadata:
     # trial: only this user may start one (run_pod checks user+domain)
     user: fror
     domain: dtu.dk
+  annotations:
+    catalog/title: "Moodle"
+    catalog/category: "Teaching and collaboration"
+    catalog/summary: "Your own Moodle learning platform, with its files on your ScienceData storage"
+    catalog/featured: "0"
 spec:
   # time for start.sh to dump and upload the database at shutdown (default 30 s is too short)
   terminationGracePeriodSeconds: 600
