@@ -1,6 +1,6 @@
-Applying this manifest will start **A pod running Nextcloud on top of Caddy, on Ubuntu 24.04**.
+Applying this manifest will start **A container running Nextcloud on top of Caddy, on Ubuntu 24.04**.
 
-This pod is for development only. A first deployment can take several minutes.
+This container is for development only. A first deployment can take several minutes.
 
 Nextcloud is installed in `/var/www/nextcloud`. Data is kept in `/var/www/data`.
 
@@ -8,11 +8,11 @@ The directory `/var/www/` is mounted from your ScienceData home server. The path
 
 If the folder you mount has a subdirectory `nextcloud`, it will be used unchanged. Otherwise, a subdirectory `nextcloud` will be created and populated with a recent minimal Nextcloud, checked out from GitHub. The initial password for 'admin' is 'secret'. It should obviously be changed immediately.
 
-The SQLite database, "/var/www/data/owncloud.db", with file information etc. is in fact a soft-link to the local file `/tmp/owncloud.db` (for performance), which is backed up to `owncloud.db-dev-foldername.gz` (where `foldername` is the name of the directory mounted from ScienceData) in the folder `Containers` in your ScienceData homedir, when the pod is deleted and every night. When a new pod is created, if this file exists, it is fetched, unpacked and used.
+The SQLite database, "/var/www/data/owncloud.db", with file information etc. is in fact a soft-link to the local file `/tmp/owncloud.db` (for performance), which is backed up to `owncloud.db-dev-foldername.gz` (where `foldername` is the name of the directory mounted from ScienceData) in the folder `Containers` in your ScienceData homedir, when the container is deleted and every night. When a new container is created, if this file exists, it is fetched, unpacked and used.
 
-NOTICE: The above implies that on a first launch, you'll need patience, as installing Nextcloud on an NFS volume can take a few minutes. Also, it is not advised to run more than one pod off the same directory with this image.
+NOTICE: The above implies that on a first launch, you'll need patience, as installing Nextcloud on an NFS volume can take a few minutes. Also, it is not advised to run more than one container off the same directory with this image.
 
-By providing a public SSH key you can access your pod via SSH.
+By providing a public SSH key you can access your container via SSH.
 
 If you provide a setup script, setting the environment variables MAIL_SMTPHOST, MAIL_SMTPNAME, MAIL_SMTPPASSWORD, Nextcloud will be able to send out mail notifications.
 

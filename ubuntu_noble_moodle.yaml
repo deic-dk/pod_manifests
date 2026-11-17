@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-moodle
+  labels:
+    app: ubuntu-noble-moodle
+    # trial: only this user may start one (run_pod checks user+domain)
+    user: fror
+    domain: dtu.dk
+spec:
+  # time for start.sh to dump and upload the database at shutdown (default 30 s is too short)
+  terminationGracePeriodSeconds: 600
+  containers:
+  - name: ubuntu-noble-moodle
+    image: sciencedata/ubuntu_noble_moodle_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/var/moodledata"
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "www"
+    - name: SD_UID
+      value: ""
+    - name: HOME_SERVER
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: HTTPS_PORT
+      value: ""
+    - name: NFS_VOLUME_PATH
+      value: ""
+    - name: NFS_RW
+      value: "yes"
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never

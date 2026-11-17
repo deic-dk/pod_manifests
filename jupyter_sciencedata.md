@@ -8,13 +8,13 @@ From a notebook or shell, your ScienceData  home server/silo can be accessed w/o
 
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
 
-To enable MATLAB, run the command below in a shell inside the pod/container:
+To enable MATLAB, run the command below in a shell inside the container:
 
 ```
 export SETUP_MATLAB=true && /usr/local/bin/start-notebook.d/matlab.sh
 ```
 
-To enable Mathematica, run the command below in a shell inside the pod/container:
+To enable Mathematica, run the command below in a shell inside the container:
 
 ```
 export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/mathematica.sh

@@ -2,9 +2,9 @@ Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) - with t
 
 The directory `/home/claude/code` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to [`/storage/`](/storage/) on your ScienceData home server. 
 
-To keep the code you work on across pod deletion/creation, run `claude` in `/home/claude/code`.
+To keep the code you work on across container deletion/creation, run `claude` in `/home/claude/code`.
 
-When deleting a pod, your Claude session files "/home/claude/.claude*" will be copied to `claude-foldername.tar.gz` in the folder `Containers` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. This is also done by an hourly cronjob. When firing up the image again, this archive, if present, will be copied over and you can continue  working where you stopped with `claude continue`.
+When deleting a container, your Claude session files "/home/claude/.claude*" will be copied to `claude-foldername.tar.gz` in the folder `Containers` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. This is also done by an hourly cronjob. When firing up the image again, this archive, if present, will be copied over and you can continue  working where you stopped with `claude continue`.
 
 By providing a public SSH key you can access your container via SSH.
 

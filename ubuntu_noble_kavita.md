@@ -4,9 +4,9 @@ After firing up this image the first time, you should visit the web page served 
 
 The directory `/home/kavita/ebooks` is mounted from your ScienceData home server. The path to the folder which is mounted is specified below. This path is relative to either your homedir, [`/files/`](/index.php/apps/files), or [`/storage/`](/storage/) on your ScienceData home server. In the former case, it is mounted read-only. Read more on `/storage/` [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
-To keep books across pod deletion/creation, configure the libraries you create to use subfolders in `/home/kavita/ebooks`.
+To keep books across container deletion/creation, configure the libraries you create to use subfolders in `/home/kavita/ebooks`.
 
-When deleting a pod, your configuration directory will be copied to `kavita_config-foldername.tar.gz` in the folder `Containers` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used - and thus you'll continue with the libraries you configured last time you ran the image.
+When deleting a container, your configuration directory will be copied to `kavita_config-foldername.tar.gz` in the folder `Containers` in your ScienceData home folder - where `foldername` is the name of the directory mounted from ScienceData. When firing up the image again, this archive, if present, will be copied over and used - and thus you'll continue with the libraries you configured last time you ran the image.
 
 By providing a public SSH key you can access your container via SSH.
 
