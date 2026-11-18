@@ -5,6 +5,8 @@ metadata:
   labels:
     app: ubuntu-noble-kavita
   annotations:
+    # a web app; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "Kavita e-book server"
     catalog/category: "Media servers"
     catalog/summary: "The Kavita digital library server - serving e-books off your ScienceData storage"

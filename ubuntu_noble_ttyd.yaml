@@ -6,6 +6,8 @@ metadata:
     app: ubuntu-noble-ttyd
     types: small-medium-large
   annotations:
+    # a terminal in the browser; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "Ubuntu 24.04 with browser terminal"
     catalog/category: "Linux"
     catalog/summary: "A shell in the browser, next to your files"

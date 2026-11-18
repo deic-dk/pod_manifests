@@ -6,6 +6,8 @@ metadata:
     app: batch
     types: small-medium-large-gpu1-gpu4
   annotations:
+    # a worker fetches its jobs itself; an SSH key only adds a root shell (debugging)
+    catalog/ssh-optional: "1"
     catalog/title: "CUDA"
     catalog/category: "Batch computing"
     catalog/summary: "Worker node for the ScienceData batch system - with CUDA preinstalled"

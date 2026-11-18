@@ -5,6 +5,8 @@ metadata:
   labels:
     app: ubuntu-noble-lyrion
   annotations:
+    # a web app; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "Lyrion music server"
     catalog/category: "Media servers"
     catalog/summary: "The Lyrion (formerly Squeezeboxserver) music server"

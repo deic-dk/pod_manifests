@@ -5,6 +5,8 @@ metadata:
   labels:
     app: ubuntu-noble-versitygw
   annotations:
+    # an S3 service; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "S3 object store"
     catalog/category: "Storage services"
     catalog/summary: "S3 gateway to your ScienceData files"

@@ -6,6 +6,8 @@ metadata:
     app: ubuntu-noble-jellyfin
     types: small-medium-large
   annotations:
+    # a web app; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "Jellyfin media server"
     catalog/category: "Media servers"
     catalog/summary: "The Jellyfin media server - serving movies, music and e-books off your ScienceData storage"

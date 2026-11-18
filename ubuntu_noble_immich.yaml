@@ -6,6 +6,8 @@ metadata:
     app: ubuntu-noble-immich
     types: small-medium-large
   annotations:
+    # a web app; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
     catalog/title: "The Immich photo server"
     catalog/category: "Media servers"
     catalog/summary: "The Immich photo/video server - serving photos and movies off your ScienceData storage"
