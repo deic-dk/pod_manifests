@@ -13,6 +13,8 @@ metadata:
     catalog/category: "Teaching and collaboration"
     catalog/summary: "Collaborative LaTeX editing - your own Overleaf for you and the people you work with"
     catalog/featured: "0"
+    # may be started for a group, whose members log in with their ScienceData accounts
+    catalog/oidc: "1"
     # used through its web page; an SSH key only adds a root shell
     catalog/ssh-optional: "1"
     # the Containers page shows "Starting..." until the image writes /tmp/URI
