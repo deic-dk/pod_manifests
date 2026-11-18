@@ -13,6 +13,8 @@ metadata:
     catalog/category: "Teaching and collaboration"
     catalog/summary: "Collaborative LaTeX editing - your own Overleaf for you and the people you work with"
     catalog/featured: "0"
+    # the Containers page shows "Starting..." until the image writes /tmp/URI
+    catalog/wait-for-token: "1"
 spec:
   # time to flush open documents and upload the backup at shutdown
   terminationGracePeriodSeconds: 900
