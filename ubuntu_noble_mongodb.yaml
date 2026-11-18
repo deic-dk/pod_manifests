@@ -13,6 +13,9 @@ metadata:
 spec:
   # time for start.sh to save the pod state at shutdown (default 30 s is too short)
   terminationGracePeriodSeconds: 600
+  # MongoDB 5+ needs AVX; the Opteron nodes (peon141, peon162) lack it
+  nodeSelector:
+    avx-present: "yes"
   containers:
   - name: ubuntu-noble-mongodb
     image: sciencedata/ubuntu_noble_mongodb_sciencedata

@@ -16,6 +16,9 @@ metadata:
 spec:
   # time to flush open documents and upload the backup at shutdown
   terminationGracePeriodSeconds: 900
+  # MongoDB 5+ needs AVX; the Opteron nodes (peon141, peon162) lack it
+  nodeSelector:
+    avx-present: "yes"
   containers:
   - name: ubuntu-noble-overleaf
     image: sciencedata/ubuntu_noble_overleaf_sciencedata
