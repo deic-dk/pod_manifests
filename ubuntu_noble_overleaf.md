@@ -1,8 +1,10 @@
 Applying this manifest will start **Overleaf**, the collaborative LaTeX editor - the extended Community Edition, which adds comments and track changes - with the full TeX Live and its database in the same container.
 
+**Who may log in**: This drop-down will include any ScienceData groups you may have created. If you choose a group, its members can log in with their ScienceData accounts and work on the projects shared with them in the container. For personal use, choose "Just me".
+
 On the first start, an administrator account is created for you, with your ScienceData user ID as e-mail address. As administrator you can create accounts for collaborators (Admin → Manage users), and share projects with them in Overleaf.
 
-Everyone with an account can compile LaTeX in this instance, and a LaTeX compile can read the other projects in it: _share an instance only with people you trust with all of its projects_.
+Everyone with an account can compile LaTeX in this instance, and a LaTeX compile can in principle read the other projects in it: therefore, _share an instance only with people you trust with all of its projects_.
 
 Projects live in the container. They are backed up to `overleaf_backup-container_name.tar` in the folder `Containers` in your ScienceData home folder - every night and when the container is deleted - and restored when you start the container again. To keep a copy of a project as ordinary files, download it from Overleaf (Menu → Download → Source).
 
