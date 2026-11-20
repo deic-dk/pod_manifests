@@ -47,4 +47,4 @@ The database is kept on the container's disk and backed up every hour, and when 
 
 ## Large courses
 
-We are still testing Moodle with large classes. Before using it for a course with many students, please contact support.
+Before using it for a course with many students, please [contact support](mailto:%support_email%).
