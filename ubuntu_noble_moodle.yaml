@@ -14,6 +14,13 @@ metadata:
     catalog/featured: "0"
     # used through its web page; an SSH key only adds a root shell
     catalog/ssh-optional: "1"
+    # log in with ScienceData: may be started for a group, whose members then
+    # log in with their accounts; just for the owner, only the owner can
+    catalog/oidc: "1"
+    # the Containers page shows "Starting..." until the image writes /tmp/URI
+    catalog/wait-for-token: "1"
+    # ubuntu_noble_moodle.guide.md: shown by the Containers app (Guide link)
+    catalog/guide: "1"
 spec:
   # time for start.sh to dump and upload the database at shutdown (default 30 s is too short)
   terminationGracePeriodSeconds: 600
