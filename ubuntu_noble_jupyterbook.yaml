@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-noble-jupyterbook
+  labels:
+    app: ubuntu-noble-jupyterbook
+    types: small-medium-large
+  annotations:
+    catalog/title: "Jupyter Book"
+    catalog/category: "Teaching and collaboration"
+    catalog/summary: "Your Jupyter Book, built and published from a ScienceData folder - with Run buttons for its notebooks"
+    catalog/featured: "0"
+    # used through its web page; an SSH key only adds a root shell
+    catalog/ssh-optional: "1"
+    # ubuntu_noble_jupyterbook.guide.md: shown by the Containers app (Guide link)
+    catalog/guide: "1"
+spec:
+  containers:
+  - name: ubuntu-noble-jupyterbook
+    image: sciencedata/ubuntu_noble_jupyterbook_sciencedata
+    volumeMounts:
+      - name: sciencedata
+        mountPath: "/book"
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    - containerPort: 22
+      protocol: TCP
+    env:
+    - name: SSH_PUBLIC_KEY
+      value: ""
+    - name: USERNAME
+      value: "www"
+    - name: HOME_SERVER
+      value: ""
+    - name: SD_UID
+      value: ""
+    - name: PUBLIC_HOME_SERVER
+      value: ""
+    - name: NFS_VOLUME_PATH
+      value: ""
+    securityContext:
+      capabilities:
+        add:
+          - "SYS_CHROOT"
+          - "AUDIT_WRITE"
+          - "NET_ADMIN"
+  restartPolicy: Never

@@ -13,22 +13,29 @@ This image runs **Moodle 5.3** (the long-term support release). Course owner and
 ## Starting your Moodle
 
 1. In **Containers**, choose **New** and the **Moodle** image.
-2. Under **Who may log in**, tick the groups of your courses. With no group ticked, only you can log in (fine for trying it out). For each ticked group, a course-material folder is made and shared with it (see above).
+2. Under **Who may log in**, tick the groups of your courses. With no group ticked, only you can log in (fine for trying it out). For each ticked group, a course-material folder is made and shared with it (see above), and a course is made in Moodle (see below).
 3. Choose a name for the folder under `/storage/` that holds the site, e.g. `moodle`. A non-existing or empty folder gives a new site; later, the same folder brings back the same site. A non-existing folder will be created.
 4. Once the container runs, check the **persistent ports** check-box in the container list, so that its address - and the links your students keep - stays the same.
 5. Open the container's link and choose **Log in with ScienceData**. You will be logged in as Moodle administrator.
 
-To add the group of a new course, delete the container and start it again with the same folder and the new group ticked as well: the site, its courses and accounts stay, and the new group gets its course-material folder.
+To add the group of a new course, delete the container and start it again with the same folder and the new group ticked as well: the site, its courses and accounts stay, and the new group gets its course-material folder and its course.
 
 ## Setting up a course
 
-1. Create the course in Moodle as usual.
-2. In the course: **Participants** → **Enrolment methods** → **Add method** → **Cohort sync**.
-3. Choose the cohort with the group's name and the role **Student**, and save.
-4. Add the course material: **Add an activity or resource** → **ScienceData folder**, and choose the group's folder (it is preselected when the course enrols the group's cohort).
-5. Inform your students that they must log in on ScienceData, so they are known by the system
-6. Add each student to the course group on ScienceData - or ask them to join the group
-7. Send the URL of your Moodle instance to your students
+For each group that may log in, Moodle makes a course named after the group - once: rename it, change it or delete it as you like, it is not made again. The course has
+
+- the group's members enrolled as students (Cohort sync - students who join or leave the group later are enrolled or unenrolled by themselves),
+- you as teacher,
+- a **ScienceData folder** with the group's course material.
+
+What is left for you:
+
+1. Open the course, give it a proper name and description if you like, and add pages, assignments, quizzes, forums as usual.
+2. Inform your students that they must log in on ScienceData, so they are known by the system.
+3. Add each student to the course group on ScienceData - or ask them to join the group.
+4. Send the URL of your Moodle instance to your students.
+
+More courses for the same group, or one course for several groups, you can set up by hand: create the course, then **Participants** → **Enrolment methods** → **Add method** → **Cohort sync**, choose the group's cohort and the role **Student**, and add a **ScienceData folder** (**Add an activity or resource**).
 
 Members of the group get their Moodle accounts in advance, so they are enrolled - and can be graded or messaged - before they first log in on Moodle. Their e-mail address and names are filled in at that first login.
 
