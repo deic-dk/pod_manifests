@@ -43,6 +43,8 @@ Course material has one home: the course's folder in `Course material` in your S
 
 Students see the same folder in ScienceData too (read-only, through the group share). Moodle's own **File** and **Folder** resources - copies of files kept inside Moodle - are switched off, so that there is only one place to keep material up to date. To insert a single file from the folder elsewhere - an image in a page, say - the file picker offers **Course material (ScienceData)**.
 
+**Videos** play in the ScienceData folder: click one to watch it. Recordings in formats browsers cannot play - from a camera or screen recorder, say - get a version that plays in the browser automatically, usually within the video's own length; the original stays as it is.
+
 Assignments are handed in to Moodle as usual.
 
 ## ScienceData links in your course
