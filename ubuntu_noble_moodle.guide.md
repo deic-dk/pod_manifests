@@ -8,13 +8,13 @@ This image runs **Moodle 5.3** (the long-term support release). Course owner and
 - **One folder, one site** To keep your material at the same URL, use the same ScienceData `/storage` folder path - the folder is the site.
 - **One ScienceData group per course.** For each course, you create a ScienceData group. You choose how your students join the group - make it an open group so they can join by themselves, or invite them.
 - **One folder of course material per group.** When Moodle starts, it makes a folder `Course material/<group name>` in your ScienceData files for each group that may log in, shared read-only with that group. What you put there, students find both in ScienceData and in the Moodle course - it is the same folder, nothing is copied.
-- **The group becomes a cohort in Moodle.** Each group you allow to log in appears in Moodle as a cohort with the group name (synchronized every five minutes). As course owner, you enrol the cohort once; students who join the group later are enrolled and those who leave are unenrolled automatically by Moodle.
+- **The group becomes a cohort in Moodle.** Each ScienceData group you allow to log in, when you start the container, appears in Moodle as a cohort with the group name (synchronized every five minutes). As course owner, you enrol the cohort once; students who join the group later are enrolled and those who leave are unenrolled automatically by Moodle.
 
 ## Starting your Moodle
 
 1. In **Containers**, choose **New** and the **Moodle** image.
-2. Under **Who may log in**, tick the groups of your courses. With no group ticked, only you can log in - fine for trying it out. For each ticked group, a course-material folder is made and shared with it (see above).
-3. Choose the folder under `/storage/` that holds the site, e.g. `moodle`. The first time, an empty folder gives a new site; later, the same folder brings back the same site. A non-existing folder will be created.
+2. Under **Who may log in**, tick the groups of your courses. With no group ticked, only you can log in (fine for trying it out). For each ticked group, a course-material folder is made and shared with it (see above).
+3. Choose a name for the folder under `/storage/` that holds the site, e.g. `moodle`. A non-existing or empty folder gives a new site; later, the same folder brings back the same site. A non-existing folder will be created.
 4. Once the container runs, check the **persistent ports** check-box in the container list, so that its address - and the links your students keep - stays the same.
 5. Open the container's link and choose **Log in with ScienceData**. You will be logged in as Moodle administrator.
 
