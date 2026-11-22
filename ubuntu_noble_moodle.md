@@ -1,4 +1,4 @@
-Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) running **Moodle 5.3** (long-term support release) and a PostgreSQL database.
+Applying this manifest will start Ubuntu Linux 24.04 LTS (Noble Numbat) running **Moodle 5.3** (long-term support release) and a bundled PostgreSQL database. It is intended primarily for trying out Moodle.
 
 The directory `/var/moodledata` is mounted from `/storage/`on your ScienceData home server and holds Moodle's files (course material, uploads). The path to the folder which is mounted is specified below. Read more on `/storage/` [here](https://sciencedata.dk/sites/developer/ManagingFiles/index#storage).
 
