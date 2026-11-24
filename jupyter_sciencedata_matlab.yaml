@@ -29,11 +29,11 @@ spec:
     - name: SD_UID
       value: ""
     - name: MATLAB_LICENSE_SERVER
-      value: "10.2.0.15"
+      value: "license-relay"
     - name: MATLAB_LICENSE_PORT
       value: "1711"
     - name: MMA_LICENSE_SERVER
-      value: "10.2.0.15"
+      value: "license-relay"
     - name: SETUP_MATLAB
       value: "true"
     - name: SETUP_MATHEMATICA
