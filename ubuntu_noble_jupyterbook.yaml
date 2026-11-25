@@ -39,6 +39,11 @@ spec:
       value: ""
     - name: NFS_VOLUME_PATH
       value: ""
+    # Only reads its folder, whose sources belong in the ordinary files (web interface,
+    # sync client, a share link for the Run buttons): the dialog offers only /files/
+    # (user_pods 0.22.4).
+    - name: NFS_RW
+      value: "no"
     securityContext:
       capabilities:
         add:

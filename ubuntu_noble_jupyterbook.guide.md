@@ -4,7 +4,7 @@ This image publishes a [Jupyter Book](https://jupyterbook.org) - a book or cours
 
 ## How it works
 
-- **The sources stay in your ScienceData files**, in an ordinary folder: the Markdown pages and notebooks, `_config.yml` (the book's settings) and `_toc.yml` (its table of contents). Edit them in the Files app, or in a folder on your computer synced with the ScienceData client.
+- **The sources stay in your ScienceData files**, in an ordinary folder: the Markdown pages and notebooks, `_config.yml` (the book's settings) and `_toc.yml` (its table of contents). Edit them in the Files app, or in a folder on your computer synced with the Nextcloud desktop client (ScienceData's sync client).
 - **The book is built by itself.** The container looks at the folder every 20 seconds; after a change it builds the book again (Jupyter Book 1, the version most course books use) and publishes it at the container's address. A build takes from seconds to minutes, depending on the notebooks it runs.
 - **A broken change does not take the book down.** If a build fails, the previous version stays online. What went wrong is in the build log, at `/_sciencedata/build.log` on the book's address.
 
@@ -12,7 +12,7 @@ This image publishes a [Jupyter Book](https://jupyterbook.org) - a book or cours
 
 1. Put your book's sources in a folder in your ScienceData files - or, to start from scratch, an example book: Jupyter Book's own [template](https://github.com/executablebooks/cookiecutter-jupyter-book) or any course book you have.
 2. In **Containers**, choose **New** and the **Jupyter Book** image.
-3. Choose the book's folder under `/files/`. The container reads it, and never changes it.
+3. Choose the book's folder under `/files/` (the only choice offered: the book's sources live in your ordinary files). The container reads it, and never changes it.
 4. Once the container runs, check **persistent ports** in the container list, so that the book's address stays the same.
 5. Open the container's link. The first build may take a minute.
 
