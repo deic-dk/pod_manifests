@@ -27,6 +27,14 @@ spec:
   containers:
   - name: ubuntu-noble-moodle
     image: sciencedata/ubuntu_noble_moodle_sciencedata
+    # Placement, not a limit: only nodes with 4 free CPUs (worker1, connect, peon141),
+    # not the 4-core ones. Load test 2026-11-25: on 4 cores Moodle was CPU-bound at
+    # ~35 req/s (200 students at once: ~5 s per page); the image sets 4 PHP-FPM
+    # workers per CPU, so a bigger node serves a deadline rush correspondingly faster.
+    resources:
+      requests:
+        cpu: "4"
+        memory: "2Gi"
     volumeMounts:
       - name: sciencedata
         mountPath: "/var/moodledata"
