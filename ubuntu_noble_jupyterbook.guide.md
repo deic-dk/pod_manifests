@@ -19,7 +19,7 @@ This image publishes a [Jupyter Book](https://jupyterbook.org) - a book or cours
 
 Books in a Git repository work the same way: keep a checkout in a synced folder. For a fuller example than the starter book, see Jupyter Book's own [template](https://github.com/executablebooks/cookiecutter-jupyter-book).
 
-## Run on ScienceData
+## "Run on ScienceData" buttons
 
 Make a public link to the book's folder (Share → share link, without a password). From the next build on, every page made from a notebook (`.ipynb`) gets a **Run on ScienceData** button. A reader who clicks it gets their own copy of the notebook, opened in their own notebook server on ScienceData - logged in with their ScienceData account, or as a guest in a temporary server. Their changes are their own; your book is not touched.
 
