@@ -19,11 +19,18 @@ This image publishes a [Jupyter Book](https://jupyterbook.org) - a book or cours
 
 Books in a Git repository work the same way: keep a checkout in a synced folder. For a fuller example than the starter book, see Jupyter Book's own [template](https://github.com/executablebooks/cookiecutter-jupyter-book).
 
+## Making the book public
+
+A new container answers only the address you started it from: the **Allowed client IP addresses** field, under the container in the container list. While you write, that keeps the book to yourself. To publish it, empty the field and click **Set**; the book's address is then open to everyone. To open it to fewer, enter their addresses or ranges instead, comma-separated (e.g. `192.0.2.0/24`).
+
+- The field covers the container's SSH port too, if you started it with SSH. A book needs no SSH: start without it.
+- A container you start again is restricted to your address again: empty the field once more.
+
 ## "Run on ScienceData" buttons
 
 Make a public link to the book's folder (Share → share link, without a password). From the next build on, every page made from a notebook (`.ipynb`) gets a **Run on ScienceData** button. A reader who clicks it gets their own copy of the notebook, opened in their own notebook server on ScienceData - logged in with their ScienceData account, or as a guest in a temporary server. Their changes are their own; your book is not touched.
 
-The public link also makes the folder's files downloadable by anyone with the link - which suits an open book. Without a link, there are no Run buttons, and the sources stay private (the published book itself is public either way).
+The public link also makes the folder's files downloadable by anyone with the link - which suits an open book. Without a link, there are no Run buttons, and the sources stay private (whether the book itself is public is set separately, see above).
 
 Pages written as Markdown get no button - only notebooks can be run.
 
