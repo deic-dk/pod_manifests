@@ -10,13 +10,14 @@ This image publishes a [Jupyter Book](https://jupyterbook.org) - a book or cours
 
 ## Starting
 
-1. Put your book's sources in a folder in your ScienceData files - or, to start from scratch, an example book: Jupyter Book's own [template](https://github.com/executablebooks/cookiecutter-jupyter-book) or any course book you have.
-2. In **Containers**, choose **New** and the **Jupyter Book** image.
-3. Choose the book's folder under `/files/` (the only choice offered: the book's sources live in your ordinary files). The container reads it, and never changes it.
-4. Once the container runs, check **persistent ports** in the container list, so that the book's address stays the same.
-5. Open the container's link. The first build may take a minute.
+1. In **Containers**, choose **New** and the **Jupyter Book** image.
+2. Choose the book's folder under `/files/` (the only choice offered: the book's sources live in your ordinary files).
+   - **To start writing a new book,** give a folder that is empty or does not exist yet, e.g. `/files/My book`. The container puts a small starter book in it: `_config.yml`, `_toc.yml`, a first page and a notebook. Change them into your own.
+   - **For a book you already have,** give its folder. The container reads it, and never changes it.
+3. Once the container runs, check **persistent ports** in the container list, so that the book's address stays the same.
+4. Open the container's link. The first build may take a minute.
 
-Books in a Git repository work the same way: keep a checkout in a synced folder.
+Books in a Git repository work the same way: keep a checkout in a synced folder. For a fuller example than the starter book, see Jupyter Book's own [template](https://github.com/executablebooks/cookiecutter-jupyter-book).
 
 ## Run on ScienceData
 
@@ -28,7 +29,7 @@ Pages written as Markdown get no button - only notebooks can be run.
 
 ## Notebooks that run when the book is built
 
-Notebooks without stored outputs are run when the book is built (Jupyter Book's default, `execute_notebooks: auto`), in the container with Python and the common scientific packages - NumPy, SciPy, pandas, Matplotlib, SymPy. With `execute_notebooks: cache` in `_config.yml`, results are cached and a notebook runs again only when it changes; with `off`, nothing is run and the outputs stored in the notebooks are published. A notebook needing other packages fails to execute: save it with its outputs, or set `off`.
+Notebooks without stored outputs are run when the book is built (Jupyter Book's default, `execute_notebooks: auto`), in the container with Python and the common scientific packages - NumPy, SciPy, pandas, Matplotlib, SymPy. With `execute_notebooks: cache` in `_config.yml`, results are cached and a notebook runs again only when it changes; with `off`, nothing is run and the outputs stored in the notebooks are published. A notebook that needs packages the container doesn't have can't be run here. Evaluate it where those packages are installed and save it: with `auto` (the default), a notebook saved with all its cells evaluated isn't run again; the book shows its results. Or set `execute_notebooks: off`, and nothing is run.
 
 ## Several books
 
