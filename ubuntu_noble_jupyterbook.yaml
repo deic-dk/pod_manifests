@@ -10,6 +10,8 @@ metadata:
     catalog/category: "Teaching and collaboration"
     catalog/summary: "Your Jupyter Book, built and published from a ScienceData folder - with Run buttons for its notebooks"
     catalog/featured: "0"
+    # The web address starts open to everyone (sciencedata_kubernetes: run_pod); SSH stays closed
+    catalog/public-web: "1"
     # used through its web page; an SSH key only adds a root shell
     catalog/ssh-optional: "1"
     # ubuntu_noble_jupyterbook.guide.md: shown by the Containers app (Guide link)

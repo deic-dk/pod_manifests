@@ -10,6 +10,8 @@ metadata:
     catalog/category: "Web servers"
     catalog/summary: "Web server for a ScienceData folder"
     catalog/featured: "1"
+    # The web address starts open to everyone (sciencedata_kubernetes: run_pod); SSH stays closed
+    catalog/public-web: "1"
 spec:
   containers:
   - name: ubuntu-noble-caddy
