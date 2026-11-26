@@ -8,20 +8,4 @@ From a notebook or shell, your ScienceData  home server/silo can be accessed w/o
 
 The image is pulled from our Docker registry. Build recipes are available on [GitHub](https://github.com/deic-dk/sciencedata_images).
 
-To enable MATLAB, run the command below in a shell inside the container:
-
-```
-export SETUP_MATLAB=true && /usr/local/bin/start-notebook.d/matlab.sh
-```
-
-To enable Mathematica, run the command below in a shell inside the container:
-
-```
-export SETUP_MATHEMATICA=true && /usr/local/bin/start-notebook.d/mathematica.sh
-```
-
-Then reload the Jupyter web page.
-
-For Mathematica to work, you may need to shut down and restart the kernel ("Kernel"->"Shutdown", "Kernel"->"Restart").
-
-_Notice: MATLAB and Mathematica are only available to DTU staff and students._
+For MATLAB or Mathematica, start the **Matlab** or **Mathematica** image instead (DTU staff and students only).
